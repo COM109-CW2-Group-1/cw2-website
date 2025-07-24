@@ -1,0 +1,25 @@
+{
+  "name": "cw2-website",
+  "version": "1.0.0",
+  "description": "Simple website project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/COM109-CW2-Group-1/cw2-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/COM109-CW2-Group-1/cw2-website/issues"
+  },
+  "homepage": "https://github.com/COM109-CW2-Group-1/cw2-website#readme",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jsdom": "^26.1.0"
+  }
+}
