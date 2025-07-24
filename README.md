@@ -42,17 +42,29 @@ IDK
 
 ## Project Structure
 
-- **Node.js**: As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.
-- **jQuery**: A lightweight, "write less, do more", Javascript library.
-The purpose of jQuery is to make it much easier to use JavaScript on your website.
-jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
-jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+CW2-WEBSITE/
+├── css/                  # Top-level CSS folder
+│   └── style.css         # Main stylesheet
+├── js/                   # Top-level JavaScript folder
+│   └── main.js           # Main JS logic
+├── node_modules/         # Installed npm packages
+├── public/               # Static public assets
+│   ├── css/              # Public-facing CSS (if different from top-level css)
+│   └── js/               # Public-facing JS (if different from top-level js)
+│       └── scripts.js    # JS file for client-side use
+├── views/                # Template files (e.g., EJS or HTML views)
+├── index.html            # Base HTML file
+├── .gitignore            # Git ignore rules
+├── package.json          # Project metadata and dependencies
+├── package-lock.json     # Exact version lock file for dependencies
+├── README.md             # Project documentation
+└── server.js             # Entry point for Node/Express server
 
 ---
 
 ## How to Run
 
-1. Clone repo through `ssh`
+1. Clone the repository
 2. Run `npm i` in terminal to install all modules/packages.
 3. Run `node server.js` in terminal to load webpage
 4. Go to `localhost:3000` to see webpage
