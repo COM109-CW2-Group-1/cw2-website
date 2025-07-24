@@ -4,8 +4,8 @@
 
 - Gerry Dempsey (B00994004)
 - Dylan Branda (B00973994)
-- Annie Barr (BNUM)
-- Cara Diamond (BNUM)
+- Annie Barr (B00990391)
+- Cara Diamond (B00997631)
 
 ---
 
