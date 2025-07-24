@@ -1,0 +1,1 @@
+// Logic for webpage. jQuery should be used here

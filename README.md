@@ -58,18 +58,14 @@ IDK
 
 ## Project Structure
 
-CW2-WEBSITE/
-├── css/                  
-│   └── style.css         
-├── js/                   
-│   └── main.js           
-├── node_modules/         
+CW2-WEBSITE/              
 ├── public/               
-│   ├── css/              
+│   ├── css/    
+│       └── styles.js             
 │   └── js/               
 │       └── scripts.js    
-├── views/                
-├── index.html            
+├── views/  
+│   └── index.html                             
 ├── .gitignore            
 ├── package.json          
 ├── package-lock.json     
@@ -94,11 +90,11 @@ CW2-WEBSITE/
 
 - [How to Use jQuery, a JavaScript Library](https://www.taniarascia.com/how-to-use-jquery-a-javascript-library/#:~:text=Warning%3A%20Your%20JavaScript%20file%20must,path%20to%20your%20file%20is.)
 - [jQuery API docs](https://api.jquery.com/)
+- [jQuery w3schools intro](https://www.w3schools.com/jquery/jquery_intro.asp)
 
 ### Node.js
 
 - [Node.js docs](https://nodejs.org/docs/latest/api/)
-- [w3schools](https://www.w3schools.com/jquery/jquery_intro.asp)
 
 ---
 ## Individual Contributions
