@@ -12,16 +12,32 @@
 ## Project Overview
 
 You are required to work in small groups to develop a contemporary and accessible website that
-includes a Web Form to validate contact and other details. The website should contain multiple pages.
+includes a Web Form to validate contact and other details.
+The website should contain multiple pages.
 Students are required to apply the key concepts and methods covered during the module HTML,
 CSS, JavaScript and relevant frameworks (such as jQuery) to implement dynamic interactive design
 and event-handling techniques (for example, animation, image effects, extensive form validation,
-etc.). Students will incorporate the knowledge of UX design and apply the principles to develop the
+etc.).
+Students will incorporate the knowledge of UX design and apply the principles to develop the
 HTML structure to consider interactivity, accessibility features, as well as including coding for
-validation of user input. The website should be standards-compliant and is capable of gathering and
-conditioning data supplied by a user. Users should be able to browse all the information. Dynamic
-interactive design and event handling techniques (for example, animations, banners, image effects,
+validation of user input.
+The website should be standards-compliant and is capable of gathering and
+conditioning data supplied by a user. Users should be able to browse all the information.
+Dynamic interactive design and event handling techniques (for example, animations, banners, image effects,
 date/time, form validation, calculator, and cookies/LocalStorage) are required.
+
+---
+
+## PR Structure
+
+Before making any changes in the project, make sure you first:
+1. `git pull` from **main branch** to check for updates
+2. Create a new branch, seperating words by `-`. E.g. `new-feature`
+3. `git add .` | `git commit -m '...'` | `git push` to push changes for your branch
+4. No need for PR review, once your happy just merge branch to **main** and it will automatically close itself!
+
+**P.S** Try to keep your changes relevant to your PR.
+Try not to change something in `index.html` if your updating the `README.md`.
 
 ---
 
@@ -42,17 +58,29 @@ IDK
 
 ## Project Structure
 
-- **Node.js**: As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.
-- **jQuery**: A lightweight, "write less, do more", Javascript library.
-The purpose of jQuery is to make it much easier to use JavaScript on your website.
-jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
-jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+CW2-WEBSITE/
+├── css/                  
+│   └── style.css         
+├── js/                   
+│   └── main.js           
+├── node_modules/         
+├── public/               
+│   ├── css/              
+│   └── js/               
+│       └── scripts.js    
+├── views/                
+├── index.html            
+├── .gitignore            
+├── package.json          
+├── package-lock.json     
+├── README.md             
+└── server.js             
 
 ---
 
 ## How to Run
 
-1. Clone repo through `ssh`
+1. Clone the repository
 2. Run `npm i` in terminal to install all modules/packages.
 3. Run `node server.js` in terminal to load webpage
 4. Go to `localhost:3000` to see webpage
@@ -71,9 +99,6 @@ jQuery also simplifies a lot of the complicated things from JavaScript, like AJA
 
 - [Node.js docs](https://nodejs.org/docs/latest/api/)
 - [w3schools](https://www.w3schools.com/jquery/jquery_intro.asp)
-
-### Express.js
-- [Express docs](https://expressjs.com/)
 
 ---
 ## Individual Contributions
