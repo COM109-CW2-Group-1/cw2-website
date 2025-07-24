@@ -100,9 +100,6 @@ CW2-WEBSITE/
 - [Node.js docs](https://nodejs.org/docs/latest/api/)
 - [w3schools](https://www.w3schools.com/jquery/jquery_intro.asp)
 
-### Express.js
-- [Express docs](https://expressjs.com/)
-
 ---
 ## Individual Contributions
 
