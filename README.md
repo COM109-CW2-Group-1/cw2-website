@@ -48,7 +48,7 @@ IDK
 
 ## How to Run
 
-1. Clone repo.
+1. Clone repo or unzip files.
 2. Open `index.html` in any modern web browser (Chrome, Firefox, Edge).
 3. Ensure JavaScript is enabled for dynamic features.
 4. Use the top navigation to browse pages.
