@@ -43,22 +43,22 @@ IDK
 ## Project Structure
 
 CW2-WEBSITE/
-├── css/                  # Top-level CSS folder
-│   └── style.css         # Main stylesheet
-├── js/                   # Top-level JavaScript folder
-│   └── main.js           # Main JS logic
-├── node_modules/         # Installed npm packages
-├── public/               # Static public assets
-│   ├── css/              # Public-facing CSS (if different from top-level css)
-│   └── js/               # Public-facing JS (if different from top-level js)
-│       └── scripts.js    # JS file for client-side use
-├── views/                # Template files (e.g., EJS or HTML views)
-├── index.html            # Base HTML file
-├── .gitignore            # Git ignore rules
-├── package.json          # Project metadata and dependencies
-├── package-lock.json     # Exact version lock file for dependencies
-├── README.md             # Project documentation
-└── server.js             # Entry point for Node/Express server
+├── css/                  
+│   └── style.css         
+├── js/                   
+│   └── main.js           
+├── node_modules/         
+├── public/               
+│   ├── css/              
+│   └── js/               
+│       └── scripts.js    
+├── views/                
+├── index.html            
+├── .gitignore            
+├── package.json          
+├── package-lock.json     
+├── README.md             
+└── server.js             
 
 ---
 
