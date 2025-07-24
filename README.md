@@ -1,10 +1,46 @@
-# Introduction
+# COM109 Coursework Two
 
-Simple website project :)
+## Group Members
 
-Most of the tools we are using should be installed on the repo, so there is no need to have to install anything before running the webpage.
+- Gerry Dempsey (B00994004)
+- Dylan Branda (B00973994)
+- Annie Barr (BNUM)
+- Cara Diamond (BNUM)
 
-### Structure
+---
+
+## Project Overview
+
+You are required to work in small groups to develop a contemporary and accessible website that
+includes a Web Form to validate contact and other details. The website should contain multiple pages.
+Students are required to apply the key concepts and methods covered during the module HTML,
+CSS, JavaScript and relevant frameworks (such as jQuery) to implement dynamic interactive design
+and event-handling techniques (for example, animation, image effects, extensive form validation,
+etc.). Students will incorporate the knowledge of UX design and apply the principles to develop the
+HTML structure to consider interactivity, accessibility features, as well as including coding for
+validation of user input. The website should be standards-compliant and is capable of gathering and
+conditioning data supplied by a user. Users should be able to browse all the information. Dynamic
+interactive design and event handling techniques (for example, animations, banners, image effects,
+date/time, form validation, calculator, and cookies/LocalStorage) are required.
+
+---
+
+## Features
+
+IDK
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- jQuery
+
+---
+
+## Project Structure
 
 - **Node.js**: As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.
 - **jQuery**: A lightweight, "write less, do more", Javascript library.
@@ -12,13 +48,19 @@ The purpose of jQuery is to make it much easier to use JavaScript on your websit
 jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
 jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
 
-# Setup
+---
 
-- Run `npm i` in terminal to install all modules/packages.
-- Run `node server.js` in terminal to load webpage
-- Go to `localhost:3000` to see webpage
+## How to Run
 
-# Useful resources
+1. Clone repo through `ssh`
+2. Run `npm i` in terminal to install all modules/packages.
+3. Run `node server.js` in terminal to load webpage
+4. Go to `localhost:3000` to see webpage
+
+---
+
+## Resources 
+- https://dribbble.com/search/contact-form
 
 ### jQuery
 
@@ -32,3 +74,13 @@ jQuery also simplifies a lot of the complicated things from JavaScript, like AJA
 
 ### Express.js
 - [Express docs](https://expressjs.com/)
+
+---
+## Individual Contributions
+
+| Team Member   | Contributions |
+| ------------- | ------------- |
+| Gerry Dempsey | Built         |
+| Annie Barr    | Built         |
+| Dylan Branda  | Built         |
+| Cara Diamond  | Built         |
