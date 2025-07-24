@@ -55,6 +55,11 @@ IDK
 
 ---
 
+## Resources 
+- https://dribbble.com/search/contact-form
+- 
+
+---
 ## Individual Contributions
 
 | Team Member   | Contributions |
