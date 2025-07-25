@@ -73,8 +73,8 @@ CW2-WEBSITE/
 
 ## How to Run
 
-1. Clone the repository by copying the web URL/SSH key
-2. Run `start views/index.html` in terminal to load the webpage into your browser
+1. Clone the repository by copying the `web URL` OR `SSH key` and entering `git clone <URL/SSH>` into your terminal.
+2. Locate the repository and run `start views/index.html` on the root directory (`CW2-website`) in terminal to load the webpage into your browser.
 
 ---
 
