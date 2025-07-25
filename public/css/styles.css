@@ -1,1 +1,28 @@
 /* All styling for the HTML webpage */
+
+/* --- Banner styles --- */
+.banner {
+  background-color: lightgray;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  margin: 0;
+}
+
+nav {
+  position: relative;
+}
