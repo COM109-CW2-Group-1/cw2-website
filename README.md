@@ -69,13 +69,14 @@ CW2-WEBSITE/
 ├── .gitignore            
 ├── package.json          
 ├── package-lock.json     
-├── README.md             
-└── server.js             
+└── README.md             
+           
 
 ---
 
 ## How to Run
 
+### SUBJECT TO CHANGE!!! REMOVING Node.js ELEMENT!!!
 1. Clone the repository
 2. Run `npm i` in terminal to install all modules/packages.
 3. Run `node server.js` in terminal to load webpage
