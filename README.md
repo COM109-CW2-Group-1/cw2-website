@@ -43,15 +43,15 @@ Try not to change something in `index.html` if your updating the `README.md`.
 
 ## Features
 
-IDK
+Work in progress
 
 ---
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
+- HTML
+- CSS
+- JavaScript
 - jQuery
 
 ---
@@ -66,21 +66,15 @@ CW2-WEBSITE/
 │       └── scripts.js    
 ├── views/  
 │   └── index.html                             
-├── .gitignore            
-├── package.json          
-├── package-lock.json     
+├── .gitignore              
 └── README.md             
            
-
 ---
 
 ## How to Run
 
-### SUBJECT TO CHANGE!!! REMOVING Node.js ELEMENT!!!
-1. Clone the repository
-2. Run `npm i` in terminal to install all modules/packages.
-3. Run `node server.js` in terminal to load webpage
-4. Go to `localhost:3000` to see webpage
+1. Clone the repository by copying the web URL/SSH key
+2. Run `start views/index.html` in terminal to load the webpage into your browser
 
 ---
 
@@ -92,10 +86,6 @@ CW2-WEBSITE/
 - [How to Use jQuery, a JavaScript Library](https://www.taniarascia.com/how-to-use-jquery-a-javascript-library/#:~:text=Warning%3A%20Your%20JavaScript%20file%20must,path%20to%20your%20file%20is.)
 - [jQuery API docs](https://api.jquery.com/)
 - [jQuery w3schools intro](https://www.w3schools.com/jquery/jquery_intro.asp)
-
-### Node.js
-
-- [Node.js docs](https://nodejs.org/docs/latest/api/)
 
 ---
 ## Individual Contributions

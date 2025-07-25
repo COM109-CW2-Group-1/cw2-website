@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // Placeholder to see if jQuery is working when the DOM loads
     alert("Welcome to the CW2 website! Fill out our form!");
 
     $('#contactForm').submit(function(event) {
@@ -8,7 +9,8 @@ $(document).ready(function() {
         var phone = $('#phone').val();
         var email = $('#email').val();
         var address = $('#address').val();
-
+        
+        // Logging is found on the webpage console, not VS Code console
         console.log("Form submitted with the following data:");
         console.log("Name: " + name);
         console.log("Phone: " + phone);
