@@ -54,7 +54,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .hamburger,
@@ -69,16 +69,17 @@ body {
 /* Always hidden unless .open is added to .sidenav*/
 .sidenav {
   position: fixed;
-  top: 50px;
+  top: 0;
   left: 0;
   width: 220px;
-  height: calc(100% - 50px);
+  height: 100%;
   background-color: var(--container);
   color: var(--text);
   padding: 1rem;
   transition: transform 0.5s ease;
-  z-index: 999;
   transform: translateX(-100%);
+  font-size: 18px;
+  z-index: 1000;
 }
 
 .sidenav.open {
@@ -121,4 +122,3 @@ body {
 .main-content {
   margin-left: 0;
 }
-

@@ -58,21 +58,26 @@ Work in progress
 
 ## Project Structure
 
-CW2-WEBSITE/              
-├── public/               
-│   ├── css/    
-│       └── styles.js             
-│   └── js/               
-│       └── scripts.js    
-├── views/  
-│   └── index.html                             
-├── .gitignore              
-└── README.md             
+```
+cw2-website/
+├── public/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   ├── scripts.js
+│   │   └── sidenav.js
+├── views/
+│   ├── index.html
+│   └── sidenav.html
+├── .gitignore
+└── README.md
+```
            
 ---
 
 ## How to Run
 
+### [NOT WORKING]!!!
 1. Clone the repository by copying the `web URL` OR `SSH key` and entering `git clone <URL/SSH>` into your terminal.
 2. Locate the repository and run `start http://127.0.0.1:5500/views/index.html` on the root directory (`CW2-website`) in terminal to load the webpage into your browser.
 

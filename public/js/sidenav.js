@@ -19,6 +19,7 @@ $(window).on('load', function () {
             console.warn('.sidenav not found inside my-sidenav');
           }
         });
+
         $('.sidenav .close').on('click', () => {
           const sidenav = $(this).find('.sidenav');
           if (sidenav.length) {
@@ -35,7 +36,8 @@ $(window).on('load', function () {
 
   customElements.define('my-sidenav', MySidenav);
 
-  // Theme toggle remains global
+  // Theme toggle is global
+  // I'm happy to change this, this works for now but it could be cleaner
   $('#themeToggle').on('click', () => {
     const html = $('html');
     const current = html.attr('data-theme') || 'light';
