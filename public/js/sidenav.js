@@ -1,3 +1,4 @@
+// Logging for broswer console
 $(window).on('load', function () {
   console.log('jQuery and DOM loaded');
 
@@ -8,10 +9,15 @@ $(window).on('load', function () {
         this.innerHTML = data;
         console.log('Sidenav loaded');
 
-        // Optional: confirm class toggle from inside component
+        // Now that .sidenav exists inside this component, hook up toggle
         $('#menuToggle').on('click', () => {
-          $(this).find('.sidenav').toggleClass('open');
-          console.log('Toggled sidenav from inside');
+          const sidenav = $(this).find('.sidenav');
+          if (sidenav.length) {
+            sidenav.toggleClass('open');
+            console.log('Toggle working: .open toggled');
+          } else {
+            console.warn('.sidenav not found inside my-sidenav');
+          }
         });
       });
     }
@@ -19,12 +25,7 @@ $(window).on('load', function () {
 
   customElements.define('my-sidenav', MySidenav);
 
-  // Also allow toggle globally (after DOM is loaded)
-  $('#menuToggle').on('click', () => {
-    console.log('Global toggle');
-    $('my-sidenav .sidenav').toggleClass('open');
-  });
-
+  // Theme toggle remains global
   $('#themeToggle').on('click', () => {
     const html = $('html');
     const current = html.attr('data-theme') || 'light';
