@@ -85,6 +85,14 @@ body {
   transform: translateX(0);
 }
 
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 .sidenav ul {
   list-style: none;
   padding: 0;

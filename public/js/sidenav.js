@@ -19,7 +19,17 @@ $(window).on('load', function () {
             console.warn('.sidenav not found inside my-sidenav');
           }
         });
-      });
+        $('.sidenav .close').on('click', () => {
+          const sidenav = $(this).find('.sidenav');
+          if (sidenav.length) {
+            sidenav.removeClass('open');
+            console.log('Sidenav closed');
+          } else {
+            console.warn('.sidenav not found inside my-sidenav');
+          }
+        });
+      }
+      );
     }
   }
 
