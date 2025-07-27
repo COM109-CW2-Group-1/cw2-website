@@ -7,24 +7,16 @@
   <link rel="stylesheet" href="../public/css/styles.css" />
 </head>
 
-
 <!-- Banner Section -->
-<header class="banner">
-  <div class="container">
-    <h1 class="logo">example</h1>
-    <nav>
-      <button class="nav-toggle">☰</button>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+<header>
+  <button id="menuToggle">&#9776; Menu</button>
+  <button id="themeToggle">Toggle Theme</button>
 </header>
 
+<my-sidenav></my-sidenav>
+
 <!-- Content Section -->
-<body>
+<main class="main-content">
   <h1>Contact Us</h1>
   <form id="contactForm">
     <label>Name:</label>
@@ -46,5 +38,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../public/js/scripts.js"></script>
-</body>
+  <script src="../public/js/sidenav.js"></script>
+</main>
 </html>
