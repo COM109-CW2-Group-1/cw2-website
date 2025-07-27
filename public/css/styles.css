@@ -21,6 +21,97 @@
   margin: 0;
 }
 
-nav {
-  position: relative;
+/* Colour theme */
+:root {
+  --bg: #EEF6FF;
+  --text: #000;
+  --container: #fff;
 }
+
+[data-theme="dark"] {
+  --bg: #030712;
+  --text: #fff;
+  --container: #030712;
+}
+
+/* Sidenav styles */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--container);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+.hamburger,
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.sidenav {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 50px);
+  background-color: var(--container);
+  color: var(--text);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.sidenav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidenav ul li {
+  margin: 1rem 0;
+}
+
+.sidenav ul li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 2rem;
+  margin-top: 50px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .sidenav {
+    transform: translateX(-100%);
+  }
+
+  .sidenav.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
