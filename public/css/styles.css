@@ -17,31 +17,34 @@
   padding: 0 20px;
 }
 
-.logo {
-  margin: 0;
-}
-
-/* Colour theme */
-:root {
-  --bg: #EEF6FF;
-  --text: #000;
-  --container: #fff;
-}
-
-[data-theme="dark"] {
-  --bg: #030712;
-  --text: #fff;
-  --container: #030712;
-}
-
-/* Sidenav styles */
-
 body {
   margin: 0;
   font-family: sans-serif;
   background-color: var(--bg);
   color: var(--text);
 }
+
+.logo {
+  margin: 0;
+}
+
+/* Colour theme */
+/* Default Light theme */
+:root {
+  --bg: #EEF6FF;
+  --text: #000;
+  --container: #fff;
+  --border: #030712;
+}
+/* Dark theme */
+[data-theme="dark"] {
+  --bg: #030712;
+  --text: #fff;
+  --container: #030712;
+  --border: #EEF6FF;
+}
+
+/* Sidenav styles */
 
 .topbar {
   position: fixed;
@@ -79,6 +82,7 @@ body {
   transition: transform 0.5s ease;
   transform: translateX(-100%);
   font-size: 18px;
+  border: var(--border) 2px solid;
   z-index: 1000;
 }
 
