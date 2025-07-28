@@ -1,0 +1,135 @@
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #030712;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --accent: #10b981; /* emerald-600 */
+  --container-light: #eef6ff;
+  --container-dark: #030712;
+}
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --container: var(--container-light);
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --container: var(--container-dark);
+}
+
+/* Navbar Base */
+.ja-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 2px solid var(--container);
+  z-index: 50;
+}
+
+/* Container */
+.ja-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Title */
+.ja-navbar-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Menu icon */
+.ja-menu-btn {
+  background: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+
+.ja-menu-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+/* Desktop menu */
+.ja-menu-desktop {
+  display: none;
+}
+
+.ja-menu-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ja-menu-link {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.ja-menu-link:hover {
+  color: var(--accent);
+}
+
+/* Dark mode button */
+.ja-dark-toggle {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile menu */
+.ja-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--bg);
+  color: var(--text);
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--container);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.ja-menu-mobile.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .ja-menu-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ja-menu-btn,
+  .ja-menu-mobile {
+    display: none;
+  }
+}

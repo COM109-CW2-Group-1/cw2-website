@@ -1,0 +1,58 @@
+
+  <nav th:fragment="navbar" class="ja-navbar">
+    <div class="ja-navbar-container">
+      <div class="ja-navbar-title">JOB ARC</div>
+
+      <button id="menu-btn" class="ja-menu-btn" aria-label="Toggle menu">
+        <svg
+          class="ja-menu-icon"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          viewBox="0 0 24 24"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div id="menu" class="ja-menu-desktop">
+        <ul class="ja-menu-list">
+          <li><a href="/#home" class="ja-menu-link">Home</a></li>
+          <li><a href="/#about" class="ja-menu-link">About</a></li>
+          <li><a href="/#features" class="ja-menu-link">Features</a></li>
+          <li><a href="/#register" class="ja-menu-link">Register</a></li>
+          <li><a href="/#reviews" class="ja-menu-link">Reviews</a></li>
+          <li><a href="/login" class="ja-menu-link">Login</a></li>
+        </ul>
+        <button onclick="toggleDarkMode()" class="ja-dark-toggle">
+          <span class="dark-icon material-symbols-outlined">dark_mode</span>
+          <span class="light-icon material-symbols-outlined" style="display: none">light_mode</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="ja-menu-mobile hidden">
+      <a href="/#home" class="ja-menu-link">Home</a>
+      <a href="/#about" class="ja-menu-link">About</a>
+      <a href="/#features" class="ja-menu-link">Features</a>
+      <a href="/#register" class="ja-menu-link">Register</a>
+      <a href="/#reviews" class="ja-menu-link">Reviews</a>
+      <a href="/login" class="ja-menu-link">Login</a>
+      <button onclick="toggleDarkMode()" class="ja-dark-toggle">
+        <span class="dark-icon material-symbols-outlined">dark_mode</span>
+        <span class="light-icon material-symbols-outlined" style="display: none">light_mode</span>
+      </button>
+    </div>
+  </nav>
+
+  <script th:src="../public/js/toggle-light-and-dark-theme.js"></script>
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
