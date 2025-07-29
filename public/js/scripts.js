@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Placeholder to see if jQuery is working when the DOM loads
-    alert("Welcome to the CW2 website! Fill out our form!");
+    console.log('scripts.js loaded');
 
     $('#contactForm').submit(function(event) {
         event.preventDefault();

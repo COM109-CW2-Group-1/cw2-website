@@ -26,6 +26,8 @@ conditioning data supplied by a user. Users should be able to browse all the inf
 Dynamic interactive design and event handling techniques (for example, animations, banners, image effects,
 date/time, form validation, calculator, and cookies/LocalStorage) are required.
 
+[CW2 Specification](https://learning.ulster.ac.uk/ultra/courses/_392714_1/outline/file/_9011286_1)
+
 ---
 
 ## PR Structure
@@ -77,9 +79,10 @@ cw2-website/
 
 ## How to Run
 
-### [NOT WORKING]!!!
 1. Clone the repository by copying the `web URL` OR `SSH key` and entering `git clone <URL/SSH>` into your terminal.
-2. Locate the repository and run `start http://127.0.0.1:5500/views/index.html` on the root directory (`CW2-website`) in terminal to load the webpage into your browser.
+2. Ensure you have the **"Live Server"** extension installed on your code editor.
+3. Right click on the `views > index.html` file located inside the root directory and select `Open with Live Server`.
+4. Our webpage should load up onto your browser for you to explore!
 
 ---
 
@@ -93,6 +96,7 @@ cw2-website/
 - [jQuery w3schools intro](https://www.w3schools.com/jquery/jquery_intro.asp)
 
 ---
+
 ## Individual Contributions
 
 | Team Member   | Contributions |

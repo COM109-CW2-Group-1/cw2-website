@@ -9,5 +9,3 @@ class MyNavbar extends HTMLElement {
 }
 
 customElements.define('my-navbar', MyNavbar);
-
-// This class isnt being hit, most likely in index.html
