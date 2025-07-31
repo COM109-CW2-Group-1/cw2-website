@@ -14,6 +14,7 @@
   --container: var(--container-light);
 }
 
+/* REMINDER: This is using 'data-theme' not 'class' */
 [data-theme="dark"] {
   --bg: var(--bg-dark);
   --text: var(--text-dark);

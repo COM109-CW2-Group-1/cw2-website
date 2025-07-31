@@ -19,10 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       function toggleDarkMode() {
-        document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const isDark = currentTheme === "dark";
+
+        const newTheme = isDark ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+
         updateIcons();
       }
+
 
       // Initial theme load
       const userPref = localStorage.getItem("theme");
