@@ -40,16 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const toggleButton = document.getElementById("themeToggle");
       if (toggleButton) {
         toggleButton.addEventListener("click", toggleDarkMode);
+        console.log(toggleButton, "button hooked up for theme toggle");
       } else {
         console.warn("#themeToggle button not found");
       }
     }
 
-    console.log("Checking for icons...");
-    console.time("Icon check duration");
-    if (darkIcon && lightIcon) {
-      console.timeEnd("Icon check duration");
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
+
     // This check every 100ms might just be redundant :// Could just use a MutationObserver like copilot suggested OR remove the check entirely.
   }, 100); // Check every 100ms
 });
