@@ -64,17 +64,21 @@ Work in progress
 cw2-website/
 ├── public/
 │   ├── css/
+│   │   ├── navbar.css
 │   │   └── styles.css
 │   ├── js/
+│   │   ├── navbar.js
 │   │   ├── scripts.js
-│   │   └── sidenav.js
+│   │   ├── sidenav.js
+│   │   └── theme-toggle.js
 ├── views/
 │   ├── index.html
+│   ├── navbar.html
 │   └── sidenav.html
 ├── .gitignore
 └── README.md
 ```
-           
+
 ---
 
 ## How to Run
