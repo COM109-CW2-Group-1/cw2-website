@@ -1,18 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Form</title>
   <link rel="stylesheet" href="../public/css/styles.css" />
+  <link rel="stylesheet" href="../public/css/navbar.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <!-- Banner Section -->
-<header class="topbar">
-  <button id="menuToggle">&#9776; Menu</button>
-  <button id="themeToggle">Toggle Theme</button>
-</header>
+<my-navbar></my-navbar>
 
+<!-- 
+  Disabled `menuToggle` since the <my-navbar> component handles navigation.
+  Need to integrate the menuToggle button however into the <my-navbar> component
+  For now, it is commented out.
+-->
+
+<!-- <span id="menuToggle">&#9776; Menu</span>
+<span id="themeToggle">Toggle Theme</span> -->
+
+ <!-- 
+Goal is to integrate the sidenav into the <my-navbar> component.
+This will allow the sidenav to be toggled from the navbar and pull down from the top.
+ -->
 <my-sidenav></my-sidenav>
 
 <!-- Content Section -->
@@ -39,5 +52,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../public/js/scripts.js"></script>
   <script src="../public/js/sidenav.js"></script>
+  <script src="../public/js/navbar.js"></script>
+  <script src="../public/js/theme-toggle.js"></script>
 </main>
 </html>
