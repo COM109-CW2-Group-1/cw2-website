@@ -129,7 +129,7 @@
     gap: 1rem;
   }
 
-  .ja-menu-btn,
+  /* .ja-menu-btn, */
   .ja-menu-mobile {
     display: none;
   }
