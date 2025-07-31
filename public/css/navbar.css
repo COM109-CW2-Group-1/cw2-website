@@ -56,7 +56,7 @@
 .ja-menu-btn {
   background: none;
   border: none;
-  display: block;
+  display: flex;
   cursor: pointer;
 }
 
