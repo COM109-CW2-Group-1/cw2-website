@@ -60,15 +60,6 @@ body {
   z-index: 999;
 }
 
-.hamburger,
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--text);
-  cursor: pointer;
-}
-
 /* Always hidden unless .open is added to .sidenav*/
 .sidenav {
   position: fixed;
