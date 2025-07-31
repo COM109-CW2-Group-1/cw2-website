@@ -13,7 +13,7 @@
         viewBox="0 0 24 24"
       >
       </svg>
-      &#9776; button
+      &#9776;
     </button>
 
     <div id="menu" class="ja-menu-desktop">
@@ -33,7 +33,7 @@
   </div>
 
   <!-- Mobile menu -->
-  <!-- <div id="mobile-menu" class="ja-menu-mobile hidden">
+  <div id="mobile-menu" class="ja-menu-mobile hidden">
     <a href="/#home" class="ja-menu-link">Home</a>
     <a href="/#about" class="ja-menu-link">About</a>
     <a href="/#features" class="ja-menu-link">Features</a>
@@ -44,10 +44,11 @@
       <span class="dark-icon material-symbols-outlined">dark_mode</span>
       <span class="light-icon material-symbols-outlined" style="display: none">light_mode</span>
     </button>
-  </div> -->
+  </div>
 </nav>
 
 <script th:src="../public/js/theme-toggle.js"></script>
+<script th:src="../public/js/sidenav.js"></script>
 <script>
   const btn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");

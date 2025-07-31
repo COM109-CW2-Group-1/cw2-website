@@ -6,13 +6,13 @@ class MySidenav extends HTMLElement {
       console.log('Sidenav loaded');
 
       // Now that .sidenav exists inside this component, hook up toggle
-      $('#menuToggle').on('click', () => {
+      $(document).on('click', '#menu-btn', () => {
         const sidenav = $(this).find('.sidenav');
         if (sidenav.length) {
           sidenav.toggleClass('open');
-          console.log('Toggle working: .open toggled');
+          console.log('Sidenav toggle triggered');
         } else {
-          console.warn('.sidenav not found inside my-sidenav');
+          console.warn('Sidenav not found in <my-sidenav>');
         }
       });
 

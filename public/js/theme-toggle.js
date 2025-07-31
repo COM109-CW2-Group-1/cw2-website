@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateIcons();
       }
 
-
       // Initial theme load
       const userPref = localStorage.getItem("theme");
       const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -46,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const toggleButton = document.getElementById("themeToggle");
       if (toggleButton) {
         toggleButton.addEventListener("click", toggleDarkMode);
-        console.log(toggleButton, "button hooked up for theme toggle");
       } else {
         console.warn("#themeToggle button not found");
       }
