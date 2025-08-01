@@ -29,31 +29,36 @@
 <!-- Content Section -->
 <!-- Needs updated -->
  <!-- Possibly use 'main-content' as a component which contains scripts/additional elements for page content -->
-<main-content>
-  <h1>Contact Us</h1>
-  <form id="contactForm">
-    <label>Name:</label>
-    <input type="text" id="name" required />
 
-    <label>Email:</label>
-    <input type="email" id="email" required />
+<body>
+  <main-content>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <label>Name:</label>
+      <input type="text" id="name" required />
 
-    <label>Phone:</label>
-    <input type="tel" id="phone" />
+      <label>Email:</label>
+      <input type="email" id="email" required />
 
-    <label>Address:</label>
-    <textarea id="address" rows="3"></textarea>
+      <label>Phone:</label>
+      <input type="tel" id="phone" />
 
-    <button type="submit">Submit</button>
-  </form>
+      <label>Address:</label>
+      <textarea id="address" rows="3"></textarea>
 
-  <div id="message"></div>
-</main-content>
+      <button type="submit">Submit</button>
+    </form>
 
+    <div id="message"></div>
+  </main-content>
+
+<my-footer></my-footer>
+</body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../public/js/scripts.js"></script>
 <script src="../public/js/sidenav.js"></script>
 <script src="../public/js/navbar.js"></script>
 <script src="../public/js/theme-toggle.js"></script>
 <script src="../public/js/main-content.js"></script>
+<script src="../public/js/footer.js"></script>
 </html>

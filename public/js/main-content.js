@@ -3,11 +3,11 @@ class MainContent extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
 
-    const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'main-content');
+    const main = document.createElement('main');
+    main.setAttribute('class', 'main-content');
 
     const slot = document.createElement('slot');
-    wrapper.appendChild(slot);
+    main.appendChild(slot);
 
     const style = document.createElement('style');
     style.textContent = `
@@ -16,11 +16,12 @@ class MainContent extends HTMLElement {
         padding: 2rem;
         margin-top: 50px;
         transition: margin-left 0.3s ease;
+        flex: 1;
       }
     `;
 
     shadow.appendChild(style);
-    shadow.appendChild(wrapper);
+    shadow.appendChild(main);
   }
 }
 

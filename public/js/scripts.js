@@ -1,26 +1,24 @@
-$(document).ready(function () {
-  $('#contactForm').on('submit', function (e) {
-    e.preventDefault(); // prevent default form submission
+$(document).ready(function() {
+    console.log('scripts.js loaded');
 
-    const formData = {
-      name: $('#name').val(),
-      email: $('#email').val(),
-      phone: $('#phone').val(),
-      address: $('#address').val()
-    };
+    $('#contactForm').submit(function(event) {
+        event.preventDefault();
 
-    $.ajax({
-      url: '/api/contact', // 👈 Replace this with your backend endpoint
-      method: 'POST',
-      data: JSON.stringify(formData),
-      contentType: 'application/json',
-      success: function (response) {
-        $('#message').text('Form submitted successfully!');
-        $('#contactForm')[0].reset();
-      },
-      error: function () {
-        $('#message').text('Error submitting the form. Please try again.');
-      }
+        var name = $('#name').val();
+        var phone = $('#phone').val();
+        var email = $('#email').val();
+        var address = $('#address').val();
+        
+        // Logging is found on the webpage console, not VS Code console
+        console.log("Form submitted with the following data:");
+        console.log("Name: " + name);
+        console.log("Phone: " + phone);
+        console.log("Email: " + email);
+        console.log("Address: " + address);
+
+        alert("Thank you for your message, " + name + "! We will get back to you soon.");
+        
+        // Reset the form fields
+        $(this).trigger("reset");
     });
-  });
 });
