@@ -19,17 +19,17 @@
   For now, it is commented out.
 -->
 
-<!-- <span id="menuToggle">&#9776; Menu</span>
-<span id="themeToggle">Toggle Theme</span> -->
+<!-- 
+<span id="menuToggle">&#9776; Menu</span>
+<span id="themeToggle">Toggle Theme</span> 
+-->
 
- <!-- 
-Goal is to integrate the sidenav into the <my-navbar> component.
-This will allow the sidenav to be toggled from the navbar and pull down from the top.
- -->
 <my-sidenav></my-sidenav>
 
 <!-- Content Section -->
-<main class="main-content">
+<!-- Needs updated -->
+ <!-- Possibly use 'main-content' as a component which contains scripts/additional elements for page content -->
+<main-content>
   <h1>Contact Us</h1>
   <form id="contactForm">
     <label>Name:</label>
@@ -48,11 +48,12 @@ This will allow the sidenav to be toggled from the navbar and pull down from the
   </form>
 
   <div id="message"></div>
+</main-content>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="../public/js/scripts.js"></script>
-  <script src="../public/js/sidenav.js"></script>
-  <script src="../public/js/navbar.js"></script>
-  <script src="../public/js/theme-toggle.js"></script>
-</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../public/js/scripts.js"></script>
+<script src="../public/js/sidenav.js"></script>
+<script src="../public/js/navbar.js"></script>
+<script src="../public/js/theme-toggle.js"></script>
+<script src="../public/js/main-content.js"></script>
 </html>

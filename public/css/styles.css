@@ -107,12 +107,12 @@ body {
   color: #f1f1f1;
 }
 
-.main-content {
+/* .main-content {
   margin-left: 220px;
   padding: 2rem;
   margin-top: 50px;
   transition: margin-left 0.3s ease;
-}
+} */
 
 .main-content {
   margin-left: 0;
