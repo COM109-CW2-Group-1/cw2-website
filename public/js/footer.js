@@ -17,3 +17,5 @@ class MyFooter extends HTMLElement {
 }
 
 customElements.define('my-footer', MyFooter);
+
+// This web component loads the footer
