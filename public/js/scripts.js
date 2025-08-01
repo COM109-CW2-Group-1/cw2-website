@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Placeholder to see if jQuery is working when the DOM loads
     console.log('scripts.js loaded');
 
     $('#contactForm').submit(function(event) {

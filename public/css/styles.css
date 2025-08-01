@@ -1,3 +1,19 @@
+/* Colour theme */
+/* default Light theme */
+:root {
+  --bg: #EEF6FF;
+  --text: #000;
+  --container: #fff;
+  --border: #030712;
+}
+/* Dark theme */
+[data-theme="dark"] {
+  --bg: #030712;
+  --text: #fff;
+  --container: #030712;
+  --border: #EEF6FF;
+}
+
 /* --- Banner styles --- */
 .banner {
   background-color: lightgray;
@@ -17,35 +33,31 @@
   padding: 0 20px;
 }
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: sans-serif;
   background-color: var(--bg);
   color: var(--text);
+}
+
+main {
+  flex: 1;
 }
 
 .logo {
   margin: 0;
 }
 
-/* Colour theme */
-/* Default Light theme */
-:root {
-  --bg: #EEF6FF;
-  --text: #000;
-  --container: #fff;
-  --border: #030712;
-}
-/* Dark theme */
-[data-theme="dark"] {
-  --bg: #030712;
-  --text: #fff;
-  --container: #030712;
-  --border: #EEF6FF;
-}
-
 /* Sidenav styles */
-
 .topbar {
   position: fixed;
   top: 0;
@@ -60,7 +72,7 @@ body {
   z-index: 999;
 }
 
-/* Always hidden unless .open is added to .sidenav*/
+/* Always hidden unless .open is added to .sidenav */
 .sidenav {
   position: fixed;
   top: 0;
@@ -107,13 +119,26 @@ body {
   color: #f1f1f1;
 }
 
-.main-content {
-  margin-left: 220px;
-  padding: 2rem;
-  margin-top: 50px;
-  transition: margin-left 0.3s ease;
+.site-footer {
+  background-color: var(--container);
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text);
+  border-top: 1px solid var(--border);
 }
 
-.main-content {
-  margin-left: 0;
+.back-to-top {
+  margin-top: 0.5rem;
+  background-color: var(--border);
+  color: var(--container);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--text);
 }
