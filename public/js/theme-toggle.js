@@ -59,6 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.classList.remove("dark");
     }
 
-    // This check every 100ms might just be redundant :// Could just use a MutationObserver like copilot suggested OR remove the check entirely.
+    // This check every 100ms adds slight overhead, only way to ensure the icons are present
   }, 100); // Check every 100ms
 });
