@@ -26,7 +26,8 @@
 
 .container {
   max-width: 1000px;
-  margin: auto;
+  margin-left: 0;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,3 +143,16 @@ main {
 .back-to-top:hover {
   background-color: var(--text);
 }
+
+.shadow-hover-img {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* for rounded corners */
+}
+
+.shadow-hover-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
