@@ -5,35 +5,20 @@
   --text: #000;
   --container: #fff;
   --border: #030712;
+  --button: linear-gradient(135deg, #274aaa, #0d38af);
+  --button-hover: linear-gradient(135deg, #EEF6FF, #57a5ff);
 }
-/* Dark theme */
+
 [data-theme="dark"] {
   --bg: #030712;
   --text: #fff;
   --container: #030712;
   --border: #EEF6FF;
+  --button: linear-gradient(135deg, #EEF6FF, #57a5ff);
+  --button-hover: linear-gradient(135deg, #274aaa, #0d38af);
 }
 
-/* --- Banner styles --- */
-.banner {
-  background-color: lightgray;
-  color: white;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.container {
-  max-width: 1000px;
-  margin-left: 0;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
+/* === Global Styles === */
 html, body {
   height: 100%;
   margin: 0;
@@ -45,20 +30,39 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0 auto;
   font-family: sans-serif;
   background-color: var(--bg);
   color: var(--text);
+  padding: 20px;
+  max-width: 900px;
 }
 
 main {
   flex: 1;
 }
 
-.logo {
-  margin: 0;
+/* === Banner === */
+.banner {
+  background-color: lightgray;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Sidenav styles */
+/* === Container === */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* === Topbar === */
 .topbar {
   position: fixed;
   top: 0;
@@ -69,11 +73,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1 1;
+  padding: 1rem;
   z-index: 999;
 }
 
-/* Always hidden unless .open is added to .sidenav */
+/* === Sidenav === */
 .sidenav {
   position: fixed;
   top: 0;
@@ -120,6 +124,7 @@ main {
   color: #f1f1f1;
 }
 
+/* === Footer === */
 .site-footer {
   background-color: var(--container);
   padding: 1rem 2rem;
@@ -129,6 +134,7 @@ main {
   border-top: 1px solid var(--border);
 }
 
+/* === Back to Top Button === */
 .back-to-top {
   margin-top: 0.5rem;
   background-color: var(--border);
@@ -144,10 +150,11 @@ main {
   background-color: var(--text);
 }
 
+/* === Shadow Hover Image === */
 .shadow-hover-img {
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px; /* for rounded corners */
+  border-radius: 8px;
 }
 
 .shadow-hover-img:hover {
@@ -156,3 +163,70 @@ main {
   cursor: pointer;
 }
 
+/* === Lists === */
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* === Image Section (Mental Health Page) === */
+.image-section {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--container);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.image-section img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+/* === Sections === */
+section {
+  margin-bottom: 30px;
+}
+
+/* === Callout Box === */
+.callout {
+  font-size: 1.1em;
+  color: var(--text);
+  background-color: var(--container);
+  padding: 15px;
+  border-left: 5px solid var(--text);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--button);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === Logo === */
+.logo {
+  margin: 0;
+}
