@@ -1,8 +1,10 @@
 <nav th:fragment="navbar" class="ja-navbar">
-  <div class="ja-navbar-container">
+
+
+ <div class="ja-navbar-container">
     <div class="ja-navbar-title">Campus Calm</div>
 
-    <button id="menu-btn" class="ja-menu-btn" aria-label="Toggle menu">
+    <button id="menu-btn" class="ja-menu-btn" onclick="openMenu()" aria-label="Toggle menu">
       <svg
         class="ja-menu-icon"
         fill="none"
@@ -34,13 +36,13 @@
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="ja-menu-mobile hidden">
-    <a href="/#home" class="ja-menu-link">Home</a>
-    <a href="/#about" class="ja-menu-link">About</a>
-    <a href="/#features" class="ja-menu-link">Features</a>
-    <a href="/#register" class="ja-menu-link">Register</a>
-    <a href="/#reviews" class="ja-menu-link">Reviews</a>
-    <a href="/login" class="ja-menu-link">Login</a>
+  <div id="mobile-menu" class="ja-menu-mobile">
+    <a href="/#home" class="ja-mobile-menu-link">Home</a>
+    <a href="/#about" class="ja-mobile-menu-link">About</a>
+    <a href="/#features" class="ja-mobile-menu-link">Features</a>
+    <a href="/#register" class="ja-mobile-menu-link">Register</a>
+    <a href="/#reviews" class="ja-mobile-menu-link">Reviews</a>
+    <a href="/login" class="ja-mobile-menu-link">Login</a>
     <button onclick="toggleDarkMode()" class="ja-dark-toggle">
       <span class="dark-icon material-symbols-outlined">dark_mode</span>
       <span class="light-icon material-symbols-outlined" style="display: none">light_mode</span>
@@ -49,12 +51,33 @@
 </nav>
 
 <script th:src="../public/js/theme-toggle.js"></script>
-<script th:src="../public/js/sidenav.js"></script>
-<script>
-  const btn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
 
-  btn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+
+<script>
+		  function openMenu() {
+				      const mobileMenu = document.getElementById("mobile-menu");
+				      mobileMenu.classList.toggle("visible");
+				    }
+
+		    // Close menu when a mobile link is clicked
+		    document.querySelectorAll('.ja-mobile-menu-link').forEach(link => {
+					    link.addEventListener('click', () => {
+								      document.getElementById("mobile-menu").classList.remove("visible");
+								    });
+					  });
+</script>
+ 
+<script>
+  function openMenu() {
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.classList.toggle("visible");
+  }
+
+  // Close menu when a mobile link is clicked
+  document.querySelectorAll('.ja-mobile-menu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById("mobile-menu").classList.remove("visible");
+    });
   });
 </script>
+ 

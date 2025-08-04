@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Form</title>
-  <link rel="stylesheet" href="../public/css/styles.css" />
-  <link rel="stylesheet" href="../public/css/navbar.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Contact Form</title>
+	<link rel="stylesheet" href="../public/css/styles.css" />
+	<link rel="stylesheet" href="../public/css/navbar.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <!-- Banner Section -->
@@ -24,41 +26,40 @@
 <span id="themeToggle">Toggle Theme</span> 
 -->
 
-<my-sidenav></my-sidenav>
 
 <!-- Content Section -->
 <!-- Needs updated -->
- <!-- Possibly use 'main-content' as a component which contains scripts/additional elements for page content -->
+<!-- Possibly use 'main-content' as a component which contains scripts/additional elements for page content -->
 
 <body>
-  <main-content>
-    <h1>Contact Us</h1>
-    <form id="contactForm">
-      <label>Name:</label>
-      <input type="text" id="name" required />
+	<main-content>
+		<h1>Contact Us</h1>
+		<form id="contactForm">
+			<label>Name:</label>
+			<input type="text" id="name" required />
 
-      <label>Email:</label>
-      <input type="email" id="email" required />
+			<label>Email:</label>
+			<input type="email" id="email" required />
 
-      <label>Phone:</label>
-      <input type="tel" id="phone" minlength="11" maxlength="11" required/>
+			<label>Phone:</label>
+			<input type="tel" id="phone" minlength="11" maxlength="11" required />
 
-      <label>Address:</label>
-      <textarea id="address" rows="3" required></textarea>
+			<label>Address:</label>
+			<textarea id="address" rows="3" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
+			<button type="submit">Submit</button>
+		</form>
 
-    <div id="message"></div>
-  </main-content>
+		<div id="message"></div>
+	</main-content>
 
-  <my-footer></my-footer>
+	<my-footer></my-footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../public/js/scripts.js"></script>
-<script src="../public/js/sidenav.js"></script>
 <script src="../public/js/navbar.js"></script>
 <script src="../public/js/theme-toggle.js"></script>
 <script src="../public/js/main-content.js"></script>
 <script src="../public/js/footer.js"></script>
+
 </html>
