@@ -12,8 +12,6 @@ class MainContent extends HTMLElement {
     const style = document.createElement('style');
     style.textContent = `
       .main-content {
-        margin-left: 220px;
-        padding: 2rem;
         margin-top: 50px;
         transition: margin-left 0.3s ease;
         flex: 1;
