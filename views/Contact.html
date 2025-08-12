@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mental Health Awareness</title>
+    <link rel="stylesheet" href="../public/css/styles.css" />
+    <link rel="stylesheet" href="../public/css/navbar.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+</head>
+<my-navbar></my-navbar>
+<body>
+    <main-content>
+        <h2>Our Locations</h2>
+        <div class="accordion2">
+            <h3>
+                Belfast
+            </h3>
+            <div class="content">
+                <div class="location-info">Block BC Level 2, 2-24 York Street, Belfast, BT15 1AP.</div>
+                <div id="map-belfast" class="map-container"></div>
+            </div>
+
+            <h3>
+                Coleraine
+            </h3>
+            <div class="content">
+                <div class="location-info">Room E023, Cromore Road, Coleraine, BT52 1SA.</div>
+                <div id="map-coleraine" class="map-container"></div>
+            </div>
+
+            <h3>
+                Derry
+            </h3>
+            <div class="content">
+                <div class="location-info">Room MG108G, Northland Road, Derry-Londonderry, BT48 7JL.</div>
+                <div id="map-derry" class="map-container"></div>
+            </div>
+        </div>
+
+        <!-- Load jQuery first -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Load your external JS file -->
+        <script src="/../public/js/maps.js"></script>
+
+        <!-- Google Maps API -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk8uTLxvf1wZGbWrA101oLZSq48Az7aUc&callback=initMap"></script>
+    </main-content>
+    <my-footer></my-footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../public/js/scripts.js"></script>
+<script src="../public/js/sidenav.js"></script>
+<script src="../public/js/navbar.js"></script>
+<script src="../public/js/theme-toggle.js"></script>
+<script src="../public/js/main-content.js"></script>
+<script src="../public/js/footer.js"></script>
+<script src="../public/js/maps.js"></script>
+</html>
+

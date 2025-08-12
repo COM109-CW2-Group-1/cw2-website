@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Form</title>
+  <link rel="stylesheet" href="../public/css/styles.css" />
+  <link rel="stylesheet" href="../public/css/navbar.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+</head>
+<my-navbar></my-navbar>
+<body>
+<main-content>
+  <div class="support-form-container">
+    <h2>Contact Support for Physical Health Issues</h2>
+    <form id="supportForm">
+      <label>Name*</label>
+      <input type="text" id="name" placeholder="Name" required />
+      <span class="error" id="nameError"></span>
+
+      <label>Email*</label>
+      <input type="email" name="email" placeholder="Email" required />
+      <span class="error" id="emailError"></span>
+
+      <label>Phone Number*</label>
+      <input type="text" name="phone" placeholder="Phone" required />
+      <span class="error" id="phoneError"></span>
+
+      <label>Subject*</label>
+      <input type="text" name="subject" placeholder="Subject" required />
+      <span class="error" id="subjectError"></span>
+
+      <label>Message*</label>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <span class="error" id="messageError"></span>
+
+      <button type="submit" class="btn">Send</button>
+      <div id="spinner" style="display:none;">⏳ Sending...</div>
+      <div id="formMessage"></div>
+    </form>
+
+  </div>
+</main-content>
+<my-footer></my-footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../public/js/scripts.js"></script>
+<script src="../public/js/sidenav.js"></script>
+<script src="../public/js/navbar.js"></script>
+<script src="../public/js/theme-toggle.js"></script>
+<script src="../public/js/main-content.js"></script>
+<script src="../public/js/footer.js"></script>
+<script src="../public/js/support-form.js"></script>
+</html>
