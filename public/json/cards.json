@@ -4,17 +4,17 @@
     "items": [
       {
         "title": "Mobility Help",
-        "description": "Quick tips and tools to get around easier.",
+        "description": "Help with mobility such as wheel chair access.",
         "image": "../public/img/mobility.jpg"
       },
       {
         "title": "Sign Language Tools",
-        "description": "Ways to use interpreters and communicate better.",
+        "description": "Sign language tools such as teachers.",
         "image": "../public/img/sign_language.jpg"
       },
       {
         "title": "Strain Equipment",
-        "description": "Stuff that helps with strains and pains.",
+        "description": "Equipment to help strain such as ergonomic keyboards.",
         "image": "../public/img/strain.jpg"
       }
     ]
@@ -24,17 +24,17 @@
     "items": [
       {
         "title": "Meditation",
-        "description": "Short exercises to calm your mind.",
+        "description": "Connect with resources for meditation for self guidance.",
         "image": "../public/img/meditation.jpg"
       },
       {
         "title": "Counselling",
-        "description": "Find therapists nearby.",
+        "description": "Connect with our consellors to talk through your problems.",
         "image": "../public/img/therapy.jpg"
       },
       {
         "title": "Daily Self-Care",
-        "description": "Easy habits to feel better each day.",
+        "description": "Get ideas and information on how to improve your self care.",
         "image": "../public/img/self_care.jpg"
       }
     ]
@@ -44,17 +44,17 @@
     "items": [
       {
         "title": "Fitness",
-        "description": "Simple exercises for strength and energy.",
+        "description": "Get access to fitness regiments and routines.",
         "image": "../public/img/fitness.jpg"
       },
       {
         "title": "Healthy Eating",
-        "description": "Easy meal ideas to stay healthy.",
+        "description": "Find information on eating more healthy.",
         "image": "../public/img/eating_healthy.jpg"
       },
       {
         "title": "Stretching & Yoga",
-        "description": "Routines for flexibility and relaxation.",
+        "description": "Connect with our community and do stretching and yoga together.",
         "image": "../public/img/yoga.jpg"
       }
     ]
