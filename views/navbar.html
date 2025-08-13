@@ -1,23 +1,24 @@
-<nav th:fragment="navbar" class="ja-navbar">
+<nav class="navbar">
 
 
-  <div class="ja-navbar-container">
-    <div class="ja-navbar-title">Campus Calm</div>
+  <div class="navbar-container">
+    <div class="navbar-title">Campus Calm</div>
 
-    <button id="menu-btn" class="ja-menu-btn" onclick="openMenu()" aria-label="Toggle menu">
-      <svg class="ja-menu-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    <button id="menu-btn" class="menu-btn" onclick="openMenu()" aria-label="Toggle menu">
+      <svg class="menu-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
         stroke-linejoin="round" viewBox="0 0 24 24">
       </svg>
       &#9776;
     </button>
 
-    <div id="menu" class="ja-menu-desktop">
-      <ul class="ja-menu-list">
-        <li><a href="index.html" class="ja-menu-link">Home</a></li>
-        <li><a href="MentalHealth.html" class="ja-menu-link">Mental Health</a></li>
-        <li><a href="example.html" class="ja-menu-link">Example</a></li>
+    <div id="menu" class="menu-desktop">
+      <ul class="menu-list">
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="mentalHealth.html" class="menu-link">Mental Health</a></li>
+        <li><a href="physicalHealthIssues.html" class="menu-link">Physical Health</a></li>
+        <li><a href="wellbeingEvents.html" class="menu-link">Well Being Events</a></li>
       </ul>
-      <button id="themeToggle" class="ja-dark-toggle">
+      <button id="themeToggle" class="dark-toggle">
         <span class="dark-icon material-symbols-outlined">dark_mode</span>
         <span class="light-icon material-symbols-outlined" style="display: none">light_mode</span>
       </button>
@@ -25,17 +26,17 @@
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="ja-menu-mobile">
-    <a href="/#home" class="ja-mobile-menu-link">Home</a>
-      <a href="/MentalHealth.html" class="ja-menu-link">Mental Health</a>
-    <div id="mobile-menu" class="ja-menu-mobile hidden">
-      <a href="/#home" class="ja-menu-link">Home</a>
-      <a href="/MentalHealth.html" class="ja-menu-link">Mental Health</a>
-      <button onclick="toggleDarkMode()" class="ja-dark-toggle">
-        <span class="dark-icon material-symbols-outlined">dark_mode</span>
-        <span class="light-icon material-symbols-outlined" style="display: none">light_mode</span>
-      </button>
-    </div>
+  <div id="mobile-menu" class="menu-mobile">
+    <a href="/#home" class="mobile-menu-link">Home</a>
+    <a href="mentalHealth.html" class="mobile-menu-link">Mental Health</a>
+    <a href="physicalHealth.html" class="mobile-menu-link">Physical Health</a>
+    <a href="wellbeingEvents.html" class="mobile-menu-link">Well Being Events</a>
+
+    <button onclick="toggleDarkMode()" class="dark-toggle">
+      <span class="dark-icon material-symbols-outlined">dark_mode</span>
+      <span class="light-icon material-symbols-outlined" style="display: none">light_mode</span>
+    </button>
+  </div>
 </nav>
 
 <script th:src="../public/js/theme-toggle.js"></script>
@@ -48,21 +49,7 @@
   }
 
   // Close menu when a mobile link is clicked
-  document.querySelectorAll('.ja-mobile-menu-link').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById("mobile-menu").classList.remove("visible");
-    });
-  });
-</script>
-
-<script>
-  function openMenu() {
-    const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.classList.toggle("visible");
-  }
-
-  // Close menu when a mobile link is clicked
-  document.querySelectorAll('.ja-mobile-menu-link').forEach(link => {
+  document.querySelectorAll('.mobile-menu-link').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById("mobile-menu").classList.remove("visible");
     });
