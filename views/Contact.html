@@ -8,46 +8,56 @@
     <link rel="stylesheet" href="../public/css/navbar.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
-<my-navbar></my-navbar>
 <body>
-    <main-content>
-        <h2>Our Locations</h2>
-        <div class="accordion2">
-            <h3>
-                Belfast
-            </h3>
-            <div class="content">
-                <div class="location-info">Block BC Level 2, 2-24 York Street, Belfast, BT15 1AP.</div>
-                <div id="map-belfast" class="map-container"></div>
-            </div>
+<my-navbar></my-navbar>-->
+<main-content>
+    <section class="intro">
+        <h1>Contact Us</h1>
+        <p>We would be delighted to hear from you. Whether you have a query, require assistance, or wish to find out more
+            about our services, our team is on hand to help.</p>
+    </section>
 
-            <h3>
-                Coleraine
-            </h3>
-            <div class="content">
-                <div class="location-info">Room E023, Cromore Road, Coleraine, BT52 1SA.</div>
-                <div id="map-coleraine" class="map-container"></div>
-            </div>
-
-            <h3>
-                Derry
-            </h3>
-            <div class="content">
-                <div class="location-info">Room MG108G, Northland Road, Derry-Londonderry, BT48 7JL.</div>
-                <div id="map-derry" class="map-container"></div>
-            </div>
+    <section class="contact-container">
+        <div class="contact-form">
+            <h1>Get In Touch</h1>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Name..." required />
+                <input type="email" name="email" placeholder="Email..." required />
+                <input type="text" name="subject" placeholder="What service is this regarding..." required />
+                <textarea name="message" placeholder="What would you like to know..." required></textarea>
+                <button class="btn">Send Message</button>
+            </form>
         </div>
 
-        <!-- Load jQuery first -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <div class="contact-info">
+            <h1>Contact Information</h1>
+            <p><span>📞</span> +44 7643 823423</p>
+            <p><span>📧</span> support@uni.com</p>
+            <p><span>📍</span> 18 Ormeau Ave, Belfast BT2 8HS </p>
 
-        <!-- Load your external JS file -->
-        <script src="/../public/js/maps.js"></script>
+            <h3>Business Hours</h3>
+            <ul>
+                <li>Monday – Friday: 9:00 am – 8:00 pm</li>
+                <li>Saturday: 9:00 am – 6:00 pm</li>
+                <li>Sunday: 9:00 am – 5:00 pm</li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- Google Maps API -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk8uTLxvf1wZGbWrA101oLZSq48Az7aUc&callback=initMap"></script>
-    </main-content>
-    <my-footer></my-footer>
+    <section class="map-section">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.673854258987!2d-5.93138582349448!3d54.59304598025602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48610853c33c9f4d%3A0x496c6d8e3321fef2!2s18%20Ormeau%20Ave%2C%20Belfast%20BT2%208HS%2C%20UK!5e0!3m2!1sen!2suk!4v1691943000000"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=18+Ormeau+Ave,+Belfast+BT2+8HS" target="_blank">
+            Get Directions
+        </a>
+    </section>
+</main-content>
+
+<my-footer></my-footer>
+
+<script src="script.js"></script>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../public/js/scripts.js"></script>
@@ -56,6 +66,4 @@
 <script src="../public/js/theme-toggle.js"></script>
 <script src="../public/js/main-content.js"></script>
 <script src="../public/js/footer.js"></script>
-<script src="../public/js/maps.js"></script>
 </html>
-
