@@ -459,6 +459,7 @@ form input, form textarea {
 }
 
 .prompt {
-  font-size: 1.5rem;
+  font-size: 30px;
   color: #333;
+  padding-bottom: 30px;
 }
