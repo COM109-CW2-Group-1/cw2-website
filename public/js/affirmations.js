@@ -1,7 +1,7 @@
 const affirmations = [
     "You are enough.",
     "Progress, not perfection.",
-    "You’re doing better than you think.",
+    "You are doing better than you think.",
     "Your feelings are valid."
 ];
 
