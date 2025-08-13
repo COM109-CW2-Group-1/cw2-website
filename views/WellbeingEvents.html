@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mental Health Awareness</title>
+    <link rel="stylesheet" href="../public/css/styles.css" />
+    <link rel="stylesheet" href="../public/css/navbar.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+</head>
+<my-navbar></my-navbar>-->
+<body>
+<main-content>
+    <h1>Events</h1>
+
+    <div class="filters">
+        <button data-filter="all" class="active" >All</button>
+        <button data-filter="mental-health">Mental Health</button>
+        <button data-filter="academic-support">Academic Support</button>
+        <button data-filter="mindfulness">Mindfulness</button>
+    </div>
+
+    <div class="event-list">
+        <div class="event" data-category="mental-health">
+            <h3>Stress Management Workshop</h3>
+            <img src="../public/img/StressManagement.png" alt="Mental Health">
+            <p>Monday 14th September — 3:00pm</p>
+        </div>
+        <div class="event" data-category="academic-support">
+            <h3>Exam Preparation Session</h3>
+            <img src="../public/img/exams.png" alt="Academic Support">
+            <p>Wednesday 16th September — 10:00am</p>
+        </div>
+        <div class="event" data-category="mindfulness">
+            <h3>Guided Meditation</h3>
+            <img src="../public/img/meditation.png" alt="Mindfulness">
+            <p>Friday 18th September — 12:00pm</p>
+        </div>
+        <div class="event" data-category="mental-health">
+            <h3>Counselling Drop-in</h3>
+            <img src="../public/img/counselling.png" alt="Mental Health">
+            <p>Tuesday 22nd September — 1:00pm</p>
+        </div>
+        <div class="event" data-category="mindfulness">
+            <h3>Yoga for Relaxation</h3>
+            <img src="../public/img/yoga.png" alt="Mindfulness">
+            <p>Thursday 24th September — 5:30pm</p>
+        </div>
+        <div class="event" data-category="academic-support">
+            <h3>Study Skills Workshop</h3>
+            <img src="../public/img/StudySkills.png" alt="Academic Support">
+            <p>Monday 28th September — 11:00am</p>
+        </div>
+    </div>
+</main-content>
+<my-footer></my-footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../public/js/events.js"></script>
+<script src="../public/js/sidenav.js"></script>
+<script src="../public/js/navbar.js"></script>
+<script src="../public/js/theme-toggle.js"></script>
+<script src="../public/js/main-content.js"></script>
+<script src="../public/js/footer.js"></script>
+</html>
