@@ -1,57 +1,56 @@
 $(document).ready(function () {
     $('#contactForm').on('submit', function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
-        let errors = [];
+        const errors = [];
+        $('#formErrors').empty(); 
 
-        $('#formErrors').text('');
-
-        let name = $('#name').val().trim();
+        const name = $('#name').val().trim();
         if (name.length < 3) {
-            errors.push('Full Name must be at least 3 characters.');
-        }
-        let email = $('#email').val().trim();
-        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            errors.push('Please enter a valid email address.');
+            errors.push('Your full name should be at least 3 characters.');
         }
 
-        let phone = $('#phone').val().trim();
-        let phonePattern = /^[0-9\s\-()+]+$/;
+        const email = $('#email').val().trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            errors.push('That email doesn’t look right. Please check it.');
+        }
+
+        const phone = $('#phone').val().trim();
+        const phonePattern = /^[0-9\s\-()+]+$/;
         if (!phonePattern.test(phone)) {
             errors.push('Please enter a valid phone number.');
         }
 
-        let address = $('#address').val().trim();
+        const address = $('#address').val().trim();
         if (address.length < 10) {
-            errors.push('Address must be at least 10 characters.');
+            errors.push('Your address should be at least 10 characters.');
         }
 
-        let postcode = $('#postcode').val().trim();
+        const postcode = $('#postcode').val().trim();
         if (!/^[A-Za-z0-9\s]+$/.test(postcode)) {
             errors.push('Please enter a valid postcode.');
         }
 
-        let dob = $('#dob').val();
+        const dob = $('#dob').val();
         if (!dob) {
-            errors.push('Please select your date of birth.');
+            errors.push('Don’t forget to select your date of birth.');
         }
 
-        let reason = $('#reason').val();
+        const reason = $('#reason').val();
         if (!reason) {
-            errors.push('Please select a reason for contact.');
+            errors.push('Please tell us why you’re contacting us.');
         }
 
         if (!$('#agree').is(':checked')) {
-            errors.push('You must agree to the Terms & Conditions.');
+            errors.push('You need to agree to our Terms & Conditions.');
         }
 
-        if (errors.length > 0) {
+        if (errors.length) {
             $('#formErrors').html(errors.join('<br>'));
         } else {
-            alert('Form submitted successfully!');
+            alert('Thanks! Your form was submitted successfully.');
             this.submit();
         }
     });
 });
-
