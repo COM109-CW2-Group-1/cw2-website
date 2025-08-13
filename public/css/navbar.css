@@ -3,9 +3,9 @@
 	--bg-dark: #030712;
 	--text-light: #000000;
 	--text-dark: #ffffff;
-	--accent: #10b981;
+	--accent: #2463EB;
 	--container-light: #eef6ff;
-	--container-dark: #030712;
+	--container-dark: #111827;
 }
 
 [data-theme="light"] {
@@ -14,14 +14,12 @@
 	--container: var(--container-light);
 }
 
-/* REMINDER: This is using 'data-theme' not 'class' */
 [data-theme="dark"] {
 	--bg: var(--bg-dark);
 	--text: var(--text-dark);
 	--container: var(--container-dark);
 }
 
-/* Navbar Base */
 .ja-navbar {
 	position: fixed;
 	top: 0;
@@ -34,9 +32,9 @@
 	z-index: 1000;
 }
 
-/* Container */
 .ja-navbar-container {
 	display: flex;
+	background-color: var(--bg);
 	justify-content: space-between;
 	align-items: center;
 	height: 56px;
@@ -114,7 +112,6 @@
 
 
 
-/* Dark mode button */
 .ja-dark-toggle {
 	background-color: var(--accent);
 	color: var(--bg);
@@ -127,7 +124,6 @@
 	justify-content: center;
 }
 
-/* Mobile menu */
 .ja-menu-mobile {
 	position: absolute;
 	top: 0;
@@ -179,7 +175,6 @@
 	transform: translateY(20%);
 }
 
-/* Responsive */
 @media (min-width: 768px) {
 	.ja-menu-desktop {
 		display: flex;
