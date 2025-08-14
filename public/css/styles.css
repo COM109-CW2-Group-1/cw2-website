@@ -1,6 +1,7 @@
 /* Colour theme */
 /* default Light theme */
 :root {
+  --bg: #EEF6FF;
   --text: #000;
   --container: #fff;
   --border: #030712;
@@ -545,4 +546,183 @@ form select:focus {
 
 .card-popup:hover {
   box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+
+/*Mental health link*/
+.support-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+  align-items: stretch;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 1 1 45%;
+  display: flex;
+}
+
+.support-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.support-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card-image {
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  margin-right: 20px;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-text h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.card-text p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.view-link {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*Separate up the page*/
+h2 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+/*Contact Page*/
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+
+.contact-form, .contact-info {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  flex: 1 1 300px;
+}
+
+.contact-form h2, .contact-info h2 {
+  margin-bottom: 50px;
+  color: #003b3b;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-info p, .contact-info ul {
+  margin: 5px 0;
+}
+
+.map-section {
+  padding: 40px;
+  text-align: center;
+}
+
+/*Student Wellbeing Events Page*/
+.filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #ecf0f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+.filters button.active,
+.filters button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.event {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.event img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+
+/*Relaxation Page*/
+.breathing-container {
+  text-align: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #4a90e2;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: inline-block;
+}
+
+.prompt {
+  font-size: 1.5rem;
+  color: #333;
 }

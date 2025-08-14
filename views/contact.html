@@ -1,80 +1,69 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact Form</title>
+    <title>Mental Health Awareness</title>
     <link rel="stylesheet" href="../public/css/styles.css" />
     <link rel="stylesheet" href="../public/css/navbar.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
-<!-- Banner Section -->
 <my-navbar></my-navbar>
-
-<!-- Content Section -->
-
-
 <body>
-    <main-content>
-        <div class="support-form-container">
-            <h2 id="service-title"></h2>
-            <p id="service-description"></p>
+<main-content>
+    <section class="intro">
+        <h1>Contact Us</h1>
+        <p>We would be delighted to hear from you. Whether you have a query, require assistance, or wish to find out more
+            about our services, our team is on hand to help.</p>
+    </section>
 
+    <section class="contact-container">
+        <div class="contact-form">
+            <h1>Get In Touch</h1>
             <form id="contactForm">
-                <label>Full Name:</label>
-                <input type="text" id="name" name="name" required minlength="3">
-
-                <label>Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label>Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label>Address:</label>
-                <input type="text" id="address" name="address" required minlength="10">
-
-                <label>Postcode:</label>
-                <input type="text" id="postcode" name="postcode" required>
-
-                <label>Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
-
-                <label>Reason for Contact:</label>
-                <select id="reason" name="reason" required>
-                    <option value="">Select one...</option>
-                    <option>General Enquiry</option>
-                    <option>Support</option>
-                    <option>Feedback</option>
-                </select>
-
-                <label>
-                    <div style="display: flex;">
-                        <div>
-                            I agree to the Terms & Conditions
-                        </div>
-                        <input class="checkboxInput" type="checkbox" id="agree" name="agree" required>
-                    </div>
-                </label>
-
-                <button type="submit" class="btn">Submit</button>
+                <input type="text" name="name" placeholder="Name..." required />
+                <input type="email" name="email" placeholder="Email..." required />
+                <input type="text" name="subject" placeholder="What service is this regarding..." required />
+                <textarea name="message" placeholder="What would you like to know..." required></textarea>
+                <button class="btn">Send Message</button>
             </form>
-
-            <p id="formErrors" class="error"></p>
         </div>
-    </main-content>
 
-    <my-footer></my-footer>
+        <div class="contact-info">
+            <h1>Contact Information</h1>
+            <p><span>📞</span> +44 7643 823423</p>
+            <p><span>📧</span> support@uni.com</p>
+            <p><span>📍</span> 18 Ormeau Ave, Belfast BT2 8HS </p>
+
+            <h3>Business Hours</h3>
+            <ul>
+                <li>Monday – Friday: 9:00 am – 8:00 pm</li>
+                <li>Saturday: 9:00 am – 6:00 pm</li>
+                <li>Sunday: 9:00 am – 5:00 pm</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.673854258987!2d-5.93138582349448!3d54.59304598025602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48610853c33c9f4d%3A0x496c6d8e3321fef2!2s18%20Ormeau%20Ave%2C%20Belfast%20BT2%208HS%2C%20UK!5e0!3m2!1sen!2suk!4v1691943000000"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=18+Ormeau+Ave,+Belfast+BT2+8HS" target="_blank">
+            Get Directions
+        </a>
+    </section>
+</main-content>
+
+<my-footer></my-footer>
+
+<script src="script.js"></script>
 </body>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../public/js/scripts.js"></script>
+<script src="../public/js/sidenav.js"></script>
 <script src="../public/js/navbar.js"></script>
 <script src="../public/js/theme-toggle.js"></script>
 <script src="../public/js/main-content.js"></script>
 <script src="../public/js/footer.js"></script>
-<script src="../public/js/contact.js"></script>
-<script src="../public/js/pass-to-contact.js"></script>
-
 </html>
