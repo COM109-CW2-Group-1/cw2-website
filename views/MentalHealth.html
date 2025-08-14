@@ -107,12 +107,13 @@
 <script src="../public/js/theme-toggle.js"></script>
 <script src="../public/js/main-content.js"></script>
 <script src="../public/js/footer.js"></script>
+<script src="../public/js/affirmations.js"></script>
 <script>
     $('.support').on('click', '.btn', function (e) {
         e.stopPropagation();
         let cardTitle = $(this).closest('.card').find('h3').text();
         let cardDescription = $(this).closest('.card').find('p').first().text();
-        window.location.href = `contact.html?title=${encodeURIComponent("Mental Health Issues")}&desc=${encodeURIComponent("Any issues that relate to the individuals mental health.")}`;
+        window.location.href = `supportForm.html?title=${encodeURIComponent("Mental Health Issues")}&desc=${encodeURIComponent("Any issues that relate to the individuals mental health.")}`;
     }); 
 </script>
 

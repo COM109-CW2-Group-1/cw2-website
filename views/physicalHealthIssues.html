@@ -177,7 +177,7 @@
                     Fill in the support form — it is a safe way to begin:
                     <br>
                     <br>
-                    <button onclick="moveToForm()" class="btn">Go to Support Form</a>
+                    <button onclick="moveToForm()" class="btn">Go to Support Form</button>
                 </li>
             </ul>
         </section>
@@ -195,7 +195,7 @@
         e.stopPropagation();
         let cardTitle = $(this).closest('.card').find('h3').text();
         let cardDescription = $(this).closest('.card').find('p').first().text();
-        window.location.href = `contact.html?title=${encodeURIComponent("Physical Health Issues")}&desc=${encodeURIComponent("Any issues that relate to the individuals physical health.")}`;
+        window.location.href = `supportForm.html?title=${encodeURIComponent("Physical Health Issues")}&desc=${encodeURIComponent("Any issues that relate to the individuals physical health.")}`;
     }); 
 </script>
 
