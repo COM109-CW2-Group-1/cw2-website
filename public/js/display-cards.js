@@ -25,7 +25,7 @@ $(document).ready(function(){
 
         $('.card-overlay').click(function(){ $('.card-expanded').each(function(){ $(this).html($(this).data('originalContent')).removeClass('card-expanded'); }); $(this).fadeOut(600); });
 
-        $('.card').on('click','.btn',function(e){ e.stopPropagation(); var cardTitle=$(this).closest('.card').find('h3').text(); var cardDescription=$(this).closest('.card').find('p').first().text(); window.location.href='contact.html?title='+encodeURIComponent(cardTitle)+'&desc='+encodeURIComponent(cardDescription); });
+        $('.card').on('click','.btn',function(e){ e.stopPropagation(); var cardTitle=$(this).closest('.card').find('h3').text(); var cardDescription=$(this).closest('.card').find('p').first().text(); window.location.href='supportFOrm.html?title='+encodeURIComponent(cardTitle)+'&desc='+encodeURIComponent(cardDescription); });
     }
 });
 // displays the cards on the page creates popups when you click the cards navigates you to a seperate page when you click the button storing the information in the url
