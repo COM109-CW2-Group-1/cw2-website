@@ -73,6 +73,23 @@ main {
   z-index: 999;
 }
 
+/* Left side: logo + text */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text, #000);
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .sidenav {
   position: fixed;
   top: 0;
@@ -260,6 +277,9 @@ form input, form textarea {
 
 
 /* Linking the pages */
+h1{
+  padding-top: 25px;
+}
 .support-container {
   display: flex;
   justify-content: space-between;
@@ -267,7 +287,7 @@ form input, form textarea {
   gap: 20px;
   margin: 40px auto;
   max-width: 1000px;
-  padding: 0 20px;
+  padding-bottom: 20px;
   align-items: stretch;
 }
 
@@ -282,7 +302,7 @@ form input, form textarea {
   display: flex;
   align-items: center;
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -360,13 +380,13 @@ form input, form textarea {
 
 .card h3 {
   margin: 10px;
-  font-size: 1.2rem;
+  font-size: 15px;
   color: var(--text);
 }
 
 .card p {
   margin: 10px;
-  font-size: 0.9rem;
+  font-size: 10px;
   color: var(--text);
 }
 
@@ -560,11 +580,12 @@ h2 {
 }
 
 .contact-form, .contact-info {
-  background: #ffffff;
+  background: var(--container);
   padding: 60px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   flex: 1 1 300px;
+  font-size: medium;
 }
 
 .contact-form h2, .contact-info h2 {
@@ -598,11 +619,10 @@ form input, form textarea {
 }
 
 .contact-item strong {
-  font-size: 1rem;
+  font-size: 10px;
 }
 
 .contact-item a {
-  color: #007BFF;
   text-decoration: none;
 }
 .contact-item a:hover {
@@ -656,11 +676,10 @@ form input, form textarea {
 }
 
 .event {
-  background-color: #fff;
+  background: var(--container);
   padding: 15px;
   border-radius: 8px;
   width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -678,6 +697,7 @@ form input, form textarea {
 /*Relaxation Page*/
 .breathing-container {
   text-align: center;
+  color: var(--text);
 }
 
 .circle {
@@ -690,6 +710,46 @@ form input, form textarea {
 }
 
 .prompt {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 25px;
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* Page-scoped tweaks for image sections */
+.image-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  background: var(--container);
+  color: var(--text);
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.image-section .media {
+  justify-self: center;
+}
+.image-section .offer-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .image-section { grid-template-columns: 300px 1fr; }
+  .image-section .media { justify-self: start; }
 }

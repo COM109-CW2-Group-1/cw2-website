@@ -4,121 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Additional Needs | Student Wellbeing</title>
-
-  <!-- Site styles -->
   <link rel="stylesheet" href="../public/css/styles.css" />
   <link rel="stylesheet" href="../public/css/navbar.css" />
-  <link rel="icon" href="../assets/campus-calm-logo.png" />
-
-  <!-- Navbar + Logo Styling -->
-  <style>
-    /* Navbar container */
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--container, #fff);
-      padding: 8px 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    /* Left side: logo + text */
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--text, #000);
-      text-decoration: none;
-    }
-
-    .navbar-brand img {
-      height: 40px;   /* smaller logo */
-      width: auto;
-      display: block;
-    }
-
-    /* Links */
-    .navbar-links {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar-links a {
-      text-decoration: none;
-      color: var(--text, #000);
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .navbar-links a:hover {
-      color: var(--primary, #007bff);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .navbar-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-    }
-
-    /* Page-scoped tweaks for image sections */
-    .image-section {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      align-items: center;
-      background: var(--container);
-      color: var(--text);
-      padding: 20px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-    .image-section .media {
-      justify-self: center;
-    }
-    .image-section .offer-img {
-      width: 100%;
-      max-width: 320px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: contain;
-    }
-    @media (min-width: 768px) {
-      .image-section { grid-template-columns: 300px 1fr; }
-      .image-section .media { justify-self: start; }
-    }
-  </style>
 </head>
-
+<my-navbar></my-navbar>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="navbar-brand">
-      <img src="../assets/campus-calm-logo.png" alt="Campus Calm Logo">
-      Campus Calm
-    </a>
-    <ul class="navbar-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="AdditionalNeeds.html">Additional Needs</a></li>
-      <li><a href="wellbeingEvents.html">Wellbeing Events</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
   <main-content>
     <div>
       <h1>Additional Needs</h1>
@@ -201,16 +91,20 @@
       </div>
 
       <!-- How to access support -->
-      <section>
+      <section class="support">
         <h2>How to Access Support</h2>
         <p>Contact the Student Wellbeing team to discuss your needs and agree a personalised plan.</p>
         <ul>
           <li>Email: <a href="mailto:wellbeing@campuscalm.com">wellbeing@calmpuscalm.com</a></li>
           <li>Phone: <a href="tel:+440000000000">+44 (0)00 0000 0000</a></li>
-          <li>Or complete our short request form:</li>
+          <li>Or complete our short request form:
+            <br>
+            <br>
+            <button class="btn">Go to Support Form</button>
+          </li>
         </ul>
-        <a href="physicalHealthIssuesForm.html" class="btn">Open Support Form</a>
       </section>
+
 
       <!-- Extra image section -->
       <section class="image-section">
@@ -228,22 +122,24 @@
     </div>
   </main-content>
 
-  <!-- Back to Top Button -->
-  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="back-to-top">
-    Back to Top
-  </button>
-
   <my-footer></my-footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="../public/js/scripts.js"></script>
-  <script src="../public/js/sidenav.js"></script>
-  <script src="../public/js/navbar.js"></script>
-  <script src="../public/js/theme-toggle.js"></script>
-  <script src="../public/js/main-content.js"></script>
-  <script src="../public/js/footer.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../public/js/scripts.js"></script>
+<script src="../public/js/sidenav.js"></script>
+<script src="../public/js/navbar.js"></script>
+<script src="../public/js/theme-toggle.js"></script>
+<script src="../public/js/main-content.js"></script>
+<script src="../public/js/footer.js"></script>
+<script>
+  $('.support').on('click', '.btn', function (e) {
+    e.stopPropagation();
+    let cardTitle = $(this).closest('.card').find('h3').text();
+    let cardDescription = $(this).closest('.card').find('p').first().text();
+    window.location.href = `supportForm.html?title=${encodeURIComponent("Additional Needs")}&desc=${encodeURIComponent("Any issues that relate to the individuals additional needs.")}`;
+  });
+</script>
+
 </html>
 
 

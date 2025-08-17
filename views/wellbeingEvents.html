@@ -1,140 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Additional Needs | Student Wellbeing</title>
-  <link rel="stylesheet" href="../public/css/styles.css" />
-  <link rel="stylesheet" href="../public/css/navbar.css" />
-  <link rel="icon" href="../public/img/favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mental Health Awareness</title>
+    <link rel="stylesheet" href="../public/css/styles.css" />
+    <link rel="stylesheet" href="../public/css/navbar.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
-
-<my-navbar></my-navbar>
+<my-navbar></my-navbar>-->
 <body>
 <main-content>
-  <div>
-    <h1>Additional Needs</h1>
-    <!-- Last-visit message (filled by JS) -->
-    <p id="lastVisit" class="note"></p>
+    <h1>Wellbeing Events</h1>
 
-    <!-- Intro -->
-    <section>
-      <p>
-        Every student’s needs are different. We offer adjustments, assistive technology, and one-to-one
-        support so you can participate fully in university life.
-      </p>
-    </section>
-
-    <!-- Hero image + What We Offer -->
-    <section class="image-section">
-      <img src="../public/img/additional-support.jpg" alt="Students receiving support on campus" />
-      <div>
-        <h3>What We Offer</h3>
-        <ul>
-          <li>One-to-one study skills support</li>
-          <li>Assistive technology and training</li>
-          <li>Exam and coursework adjustments</li>
-          <li>Accessible learning materials</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Visual cards -->
-    <section class="support-container">
-      <!-- Assistive Tech -->
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <img class="card-image" src="../public/img/assistive-tech.jpg" alt="Laptop with accessibility software" />
-          <div class="card-text">
-            <h3>Assistive Technology</h3>
-            <p>Screen readers, text-to-speech, mind-mapping tools, and training to use them confidently.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Exam Adjustments -->
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <img class="card-image" src="../public/img/exam-adjustments.jpg" alt="Quiet exam room with individual desks" />
-          <div class="card-text">
-            <h3>Exam Adjustments</h3>
-            <p>Extra time, rest breaks, smaller/quiet rooms, and use of a computer or AT where needed.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Accessible Campus -->
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <img class="card-image" src="../public/img/accessible-campus.jpg" alt="Accessible entrance with ramp on campus" />
-          <div class="card-text">
-            <h3>Accessible Campus</h3>
-            <p>Step-free routes, lifts, accessible toilets, quiet/sensory spaces, and prayer/faith rooms.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Optional extra card -->
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <img class="card-image" src="../public/img/study-support.jpg" alt="Student working with a mentor" />
-          <div class="card-text">
-            <h3>Study Support</h3>
-            <p>Note-taking support, mentoring, study-skills coaching, and accessible course materials.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-    </section>
-
-    <!-- DSA callout -->
-    <div class="callout">
-      <strong>Did you know?</strong> If you have a disability or learning difference, you may be eligible for
-      the Disabled Students’ Allowance (DSA) to help with study-related costs.
+    <div class="filters">
+        <button data-filter="all" class="active" >All</button>
+        <button data-filter="mental-health">Mental Health</button>
+        <button data-filter="academic-support">Academic Support</button>
+        <button data-filter="mindfulness">Mindfulness</button>
     </div>
 
-    <!-- How to access support -->
-    <section>
-      <h2>How to Access Support</h2>
-      <p>Contact the Student Wellbeing team to discuss your needs and agree a personalised plan.</p>
-      <ul>
-        <li>Email: <a href="mailto:wellbeing@example.ac.uk">wellbeing@example.ac.uk</a></li>
-        <li>Phone: <a href="tel:+440000000000">+44 (0)00 0000 0000</a></li>
-        <li>Or complete our short request form:</li>
-      </ul>
-      <a href="../views/contact.html" class="btn">Open Contact Form</a>
-    </section>
+    <div class="event-list">
+        <div class="event" data-category="mental-health">
+            <h3>Stress Management Workshop</h3>
+            <img src="../public/img/StressManagement.png" alt="Mental Health">
+            <p>Monday 14th September — 3:00pm</p>
+        </div>
+        <div class="event" data-category="academic-support">
+            <h3>Exam Preparation Session</h3>
+            <img src="../public/img/exams.png" alt="Academic Support">
+            <p>Wednesday 16th September — 10:00am</p>
+        </div>
+        <div class="event" data-category="mindfulness">
+            <h3>Guided Meditation</h3>
+            <img src="../public/img/meditation.png" alt="Mindfulness">
+            <p>Friday 18th September — 12:00pm</p>
+        </div>
+        <div class="event" data-category="mental-health">
+            <h3>Counselling Drop-in</h3>
+            <img src="../public/img/counselling.png" alt="Mental Health">
+            <p>Tuesday 22nd September — 1:00pm</p>
+        </div>
 
-    <!-- Extra image-section -->
-    <section class="image-section">
-      <img src="../public/img/accessible-campus.jpg" alt="Step-free route and lift access signage" />
-      <div>
-        <h3>Accessibility on Campus</h3>
-        <p>
-          We provide step-free routes and accessible facilities across campus. Ask us about building maps,
-          reserved seating, or help planning your route between classes.
-        </p>
-      </div>
-    </section>
-  </div>
+        <div class="event" data-category="mindfulness">
+            <h3>Yoga for Relaxation</h3>
+            <img src="../public/img/yoga.png" alt="Mindfulness">
+            <p>Thursday 24th September — 5:30pm</p>
+        </div>
+        <div class="event" data-category="academic-support">
+            <h3>Study Skills Workshop</h3>
+            <img src="../public/img/StudySkills.png" alt="Academic Support">
+            <p>Monday 28th September — 11:00am</p>
+        </div>
+    </div>
 </main-content>
-
 <my-footer></my-footer>
-
-<!-- Existing scripts -->
+</body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../public/js/scripts.js"></script>
+<script src="../public/js/events.js"></script>
 <script src="../public/js/sidenav.js"></script>
 <script src="../public/js/navbar.js"></script>
 <script src="../public/js/theme-toggle.js"></script>
 <script src="../public/js/main-content.js"></script>
 <script src="../public/js/footer.js"></script>
-
-<!-- NEW: last-visit feature for this page -->
-<script src="../public/js/additional-needs.js"></script>
-</body>
 </html>
-
