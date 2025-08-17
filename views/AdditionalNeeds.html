@@ -8,11 +8,74 @@
   <!-- Site styles -->
   <link rel="stylesheet" href="../public/css/styles.css" />
   <link rel="stylesheet" href="../public/css/navbar.css" />
-  <link rel="icon" href="../public/img/favicon.png" />
+  <link rel="icon" href="../assets/campus-calm-logo.png" />
 
-  <!-- Page-scoped tweaks for better image scaling in the hero section -->
+  <!-- Navbar + Logo Styling -->
   <style>
-    /* Responsive, tidy side-by-side layout for the hero section */
+    /* Navbar container */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--container, #fff);
+      padding: 8px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Left side: logo + text */
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--text, #000);
+      text-decoration: none;
+    }
+
+    .navbar-brand img {
+      height: 40px;   /* smaller logo */
+      width: auto;
+      display: block;
+    }
+
+    /* Links */
+    .navbar-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      color: var(--text, #000);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+      color: var(--primary, #007bff);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    /* Page-scoped tweaks for image sections */
     .image-section {
       display: grid;
       grid-template-columns: 1fr;
@@ -25,159 +88,162 @@
       border-radius: 12px;
     }
     .image-section .media {
-      justify-self: center; /* centers the image on small screens */
+      justify-self: center;
     }
     .image-section .offer-img {
       width: 100%;
-      max-width: 320px;    /* control visual size on desktop */
-      height: auto;        /* keep aspect ratio */
+      max-width: 320px;
+      height: auto;
       border-radius: 12px;
-      object-fit: contain; /* no cropping; great for illustrations */
+      object-fit: contain;
     }
-    /* Two-column at tablet/desktop */
     @media (min-width: 768px) {
       .image-section { grid-template-columns: 300px 1fr; }
       .image-section .media { justify-self: start; }
     }
-
-    /* Optional: ensure card thumbnails are consistent */
-    .support-card .card-image {
-      width: 160px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-right: 20px;
-    }
   </style>
 </head>
 
-<my-navbar></my-navbar>
 <body>
-<main-content>
-  <div>
-    <h1>Additional Needs</h1>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="../assets/campus-calm-logo.png" alt="Campus Calm Logo">
+      Campus Calm
+    </a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AdditionalNeeds.html">Additional Needs</a></li>
+      <li><a href="wellbeingEvents.html">Wellbeing Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Intro -->
-    <section>
-      <p>
-        Every student’s needs are different. We offer adjustments, assistive technology, and one-to-one
-        support so you can participate fully in university life.
-      </p>
-    </section>
+  <main-content>
+    <div>
+      <h1>Additional Needs</h1>
 
-    <!-- Hero image + What We Offer (now responsive & neatly scaled) -->
-    <section class="image-section">
-      <div class="media">
-        <img class="offer-img" src="../public/img/additional-support.jpg" alt="Students receiving support on campus">
-      </div>
-      <div>
-        <h3>What We Offer</h3>
-        <ul>
-          <li>One-to-one study skills support</li>
-          <li>Assistive technology and training</li>
-          <li>Exam and coursework adjustments</li>
-          <li>Accessible learning materials</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Visual cards -->
-    <section class="support-container">
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <img class="card-image" src="../public/img/assistive-tech.jpg" alt="Laptop with accessibility software">
-          <div class="card-text">
-            <h3>Assistive Technology</h3>
-            <p>Screen readers, text-to-speech, mind-mapping tools, and training to use them confidently.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <!-- Uses your actual filename 'exams.png' -->
-          <img class="card-image" src="../public/img/exams.png" alt="Quiet exam room with individual desks">
-          <div class="card-text">
-            <h3>Exam Adjustments</h3>
-            <p>Extra time, rest breaks, smaller/quiet rooms, and use of a computer or AT where needed.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <img class="card-image" src="../public/img/accessible-campus.jpg" alt="Accessible entrance with ramp on campus">
-          <div class="card-text">
-            <h3>Accessible Campus</h3>
-            <p>Step-free routes, lifts, accessible toilets, quiet/sensory spaces, and prayer/faith rooms.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="card-link">
-        <div class="support-card">
-          <img class="card-image" src="../public/img/study-support.jpg" alt="Student working with a mentor">
-          <div class="card-text">
-            <h3>Study Support</h3>
-            <p>Note-taking support, mentoring, study-skills coaching, and accessible course materials.</p>
-            <span class="view-link">Learn more</span>
-          </div>
-        </div>
-      </a>
-    </section>
-
-    <!-- DSA callout -->
-    <div class="callout">
-      <strong>Did you know?</strong> If you have a disability or learning difference, you may be eligible for
-      the Disabled Students’ Allowance (DSA) to help with study-related costs.
-    </div>
-
-    <!-- How to access support -->
-    <section>
-      <h2>How to Access Support</h2>
-      <p>Contact the Student Wellbeing team to discuss your needs and agree a personalised plan.</p>
-      <ul>
-        <li>Email: <a href="mailto:wellbeing@example.ac.uk">wellbeing@example.ac.uk</a></li>
-        <li>Phone: <a href="tel:+440000000000">+44 (0)00 0000 0000</a></li>
-        <li>Or complete our short request form:</li>
-      </ul>
-      <a href="physicalHealthIssuesForm.html" class="btn">Open Support Form</a>
-    </section>
-
-    <!-- Extra image section -->
-    <section class="image-section">
-      <div class="media">
-        <img class="offer-img" src="../public/img/accessible-campus.jpg" alt="Step-free route and lift access signage">
-      </div>
-      <div>
-        <h3>Accessibility on Campus</h3>
+      <!-- Intro -->
+      <section>
         <p>
-          We provide step-free routes and accessible facilities across campus. Ask us about building maps,
-          reserved seating, or help planning your route between classes.
+          Every student’s needs are different. We offer adjustments, assistive technology, and one-to-one
+          support so you can participate fully in university life.
         </p>
+      </section>
+
+      <!-- Hero section -->
+      <section class="image-section">
+        <div class="media">
+          <img class="offer-img" src="../public/img/additional-support.jpg" alt="Students receiving support on campus">
+        </div>
+        <div>
+          <h3>What We Offer</h3>
+          <ul>
+            <li>One-to-one study skills support</li>
+            <li>Assistive technology and training</li>
+            <li>Exam and coursework adjustments</li>
+            <li>Accessible learning materials</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Support cards -->
+      <section class="support-container">
+        <a href="#" class="card-link">
+          <div class="support-card">
+            <img class="card-image" src="../public/img/assistive-tech.jpg" alt="Laptop with accessibility software">
+            <div class="card-text">
+              <h3>Assistive Technology</h3>
+              <p>Screen readers, text-to-speech, mind-mapping tools, and training to use them confidently.</p>
+              <span class="view-link">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="card-link">
+          <div class="support-card">
+            <img class="card-image" src="../public/img/exams.png" alt="Quiet exam room with individual desks">
+            <div class="card-text">
+              <h3>Exam Adjustments</h3>
+              <p>Extra time, rest breaks, smaller/quiet rooms, and use of a computer or AT where needed.</p>
+              <span class="view-link">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="card-link">
+          <div class="support-card">
+            <img class="card-image" src="../public/img/accessible-campus.jpg" alt="Accessible entrance with ramp on campus">
+            <div class="card-text">
+              <h3>Accessible Campus</h3>
+              <p>Step-free routes, lifts, accessible toilets, quiet/sensory spaces, and prayer/faith rooms.</p>
+              <span class="view-link">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="card-link">
+          <div class="support-card">
+            <img class="card-image" src="../public/img/study-support.jpg" alt="Student working with a mentor">
+            <div class="card-text">
+              <h3>Study Support</h3>
+              <p>Note-taking support, mentoring, study-skills coaching, and accessible course materials.</p>
+              <span class="view-link">Learn more</span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- DSA callout -->
+      <div class="callout">
+        <strong>Did you know?</strong> If you have a disability or learning difference, you may be eligible for
+        the Disabled Students’ Allowance (DSA) to help with study-related costs.
       </div>
-    </section>
-  </div>
-</main-content>
 
-<!-- Back to Top Button -->
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="back-to-top">
-  Back to Top
-</button>
+      <!-- How to access support -->
+      <section>
+        <h2>How to Access Support</h2>
+        <p>Contact the Student Wellbeing team to discuss your needs and agree a personalised plan.</p>
+        <ul>
+          <li>Email: <a href="mailto:wellbeing@campuscalm.com">wellbeing@calmpuscalm.com</a></li>
+          <li>Phone: <a href="tel:+440000000000">+44 (0)00 0000 0000</a></li>
+          <li>Or complete our short request form:</li>
+        </ul>
+        <a href="physicalHealthIssuesForm.html" class="btn">Open Support Form</a>
+      </section>
 
-<my-footer></my-footer>
+      <!-- Extra image section -->
+      <section class="image-section">
+        <div class="media">
+          <img class="offer-img" src="../public/img/accessible-campus.jpg" alt="Step-free route and lift access signage">
+        </div>
+        <div>
+          <h3>Accessibility on Campus</h3>
+          <p>
+            We provide step-free routes and accessible facilities across campus. Ask us about building maps,
+            reserved seating, or help planning your route between classes.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main-content>
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../public/js/scripts.js"></script>
-<script src="../public/js/sidenav.js"></script>
-<script src="../public/js/navbar.js"></script>
-<script src="../public/js/theme-toggle.js"></script>
-<script src="../public/js/main-content.js"></script>
-<script src="../public/js/footer.js"></script>
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="back-to-top">
+    Back to Top
+  </button>
+
+  <my-footer></my-footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../public/js/scripts.js"></script>
+  <script src="../public/js/sidenav.js"></script>
+  <script src="../public/js/navbar.js"></script>
+  <script src="../public/js/theme-toggle.js"></script>
+  <script src="../public/js/main-content.js"></script>
+  <script src="../public/js/footer.js"></script>
 </body>
 </html>
+
 
