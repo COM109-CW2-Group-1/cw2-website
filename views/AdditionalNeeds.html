@@ -4,9 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Additional Needs | Student Wellbeing</title>
+
+  <!-- Site styles -->
   <link rel="stylesheet" href="../public/css/styles.css" />
   <link rel="stylesheet" href="../public/css/navbar.css" />
   <link rel="icon" href="../public/img/favicon.png" />
+
+  <!-- Page-scoped tweaks for better image scaling in the hero section -->
+  <style>
+    /* Responsive, tidy side-by-side layout for the hero section */
+    .image-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: center;
+      background: var(--container);
+      color: var(--text);
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .image-section .media {
+      justify-self: center; /* centers the image on small screens */
+    }
+    .image-section .offer-img {
+      width: 100%;
+      max-width: 320px;    /* control visual size on desktop */
+      height: auto;        /* keep aspect ratio */
+      border-radius: 12px;
+      object-fit: contain; /* no cropping; great for illustrations */
+    }
+    /* Two-column at tablet/desktop */
+    @media (min-width: 768px) {
+      .image-section { grid-template-columns: 300px 1fr; }
+      .image-section .media { justify-self: start; }
+    }
+
+    /* Optional: ensure card thumbnails are consistent */
+    .support-card .card-image {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-right: 20px;
+    }
+  </style>
 </head>
 
 <my-navbar></my-navbar>
@@ -14,8 +56,6 @@
 <main-content>
   <div>
     <h1>Additional Needs</h1>
-    <!-- Last-visit message (filled by JS) -->
-    <p id="lastVisit" class="note"></p>
 
     <!-- Intro -->
     <section>
@@ -25,9 +65,11 @@
       </p>
     </section>
 
-    <!-- Hero image + What We Offer -->
+    <!-- Hero image + What We Offer (now responsive & neatly scaled) -->
     <section class="image-section">
-      <img src="../public/img/additional-support.jpg" alt="Students receiving support on campus" />
+      <div class="media">
+        <img class="offer-img" src="../public/img/additional-support.jpg" alt="Students receiving support on campus">
+      </div>
       <div>
         <h3>What We Offer</h3>
         <ul>
@@ -41,10 +83,9 @@
 
     <!-- Visual cards -->
     <section class="support-container">
-      <!-- Assistive Tech -->
       <a href="#" class="card-link">
         <div class="support-card">
-          <img class="card-image" src="../public/img/assistive-tech.jpg" alt="Laptop with accessibility software" />
+          <img class="card-image" src="../public/img/assistive-tech.jpg" alt="Laptop with accessibility software">
           <div class="card-text">
             <h3>Assistive Technology</h3>
             <p>Screen readers, text-to-speech, mind-mapping tools, and training to use them confidently.</p>
@@ -53,10 +94,10 @@
         </div>
       </a>
 
-      <!-- Exam Adjustments -->
       <a href="#" class="card-link">
         <div class="support-card">
-          <img class="card-image" src="../public/img/exam-adjustments.jpg" alt="Quiet exam room with individual desks" />
+          <!-- Uses your actual filename 'exams.png' -->
+          <img class="card-image" src="../public/img/exams.png" alt="Quiet exam room with individual desks">
           <div class="card-text">
             <h3>Exam Adjustments</h3>
             <p>Extra time, rest breaks, smaller/quiet rooms, and use of a computer or AT where needed.</p>
@@ -65,10 +106,9 @@
         </div>
       </a>
 
-      <!-- Accessible Campus -->
       <a href="#" class="card-link">
         <div class="support-card">
-          <img class="card-image" src="../public/img/accessible-campus.jpg" alt="Accessible entrance with ramp on campus" />
+          <img class="card-image" src="../public/img/accessible-campus.jpg" alt="Accessible entrance with ramp on campus">
           <div class="card-text">
             <h3>Accessible Campus</h3>
             <p>Step-free routes, lifts, accessible toilets, quiet/sensory spaces, and prayer/faith rooms.</p>
@@ -77,10 +117,9 @@
         </div>
       </a>
 
-      <!-- Optional extra card -->
       <a href="#" class="card-link">
         <div class="support-card">
-          <img class="card-image" src="../public/img/study-support.jpg" alt="Student working with a mentor" />
+          <img class="card-image" src="../public/img/study-support.jpg" alt="Student working with a mentor">
           <div class="card-text">
             <h3>Study Support</h3>
             <p>Note-taking support, mentoring, study-skills coaching, and accessible course materials.</p>
@@ -108,9 +147,11 @@
       <a href="physicalHealthIssuesForm.html" class="btn">Open Support Form</a>
     </section>
 
-    <!-- Extra image-section -->
+    <!-- Extra image section -->
     <section class="image-section">
-      <img src="../public/img/accessible-campus.jpg" alt="Step-free route and lift access signage" />
+      <div class="media">
+        <img class="offer-img" src="../public/img/accessible-campus.jpg" alt="Step-free route and lift access signage">
+      </div>
       <div>
         <h3>Accessibility on Campus</h3>
         <p>
@@ -122,9 +163,14 @@
   </div>
 </main-content>
 
+<!-- Back to Top Button -->
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="back-to-top">
+  Back to Top
+</button>
+
 <my-footer></my-footer>
 
-<!-- Existing scripts -->
+<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../public/js/scripts.js"></script>
 <script src="../public/js/sidenav.js"></script>
@@ -132,9 +178,6 @@
 <script src="../public/js/theme-toggle.js"></script>
 <script src="../public/js/main-content.js"></script>
 <script src="../public/js/footer.js"></script>
-
-<!-- NEW: last-visit feature for this page -->
-<script src="../public/js/additional-needs.js"></script>
 </body>
 </html>
 
